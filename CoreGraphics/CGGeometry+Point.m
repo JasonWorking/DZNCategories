@@ -1,0 +1,25 @@
+//
+//  CGGeometry+Point.m
+//
+//  Created by Ignacio Romero Zurbuchen on 3/25/13.
+//  Copyright (c) 2011 DZen Interaktiv.
+//  Licence: MIT-Licence
+//
+
+#import "CGGeometry+Point.h"
+
+CGPoint CGPointScale(CGPoint point, CGFloat scale)
+{
+	return CGPointMake(point.x * scale, point.y * scale);
+}
+
+CGPoint CGRectCenterPoint(CGRect rect)
+{
+    return CGPointMake(CGRectGetMinX(rect) + CGRectGetWidth(rect)/2,
+                       CGRectGetMinY(rect) + CGRectGetHeight(rect)/2);
+}
+
+bool CGPointIsEmpty(CGPoint point)
+{
+    return (point.x == 0 && point.y == 0) ? true : false;
+}
