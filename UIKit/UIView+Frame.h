@@ -46,5 +46,16 @@
  */
 - (void)addOriginX:(CGFloat)newX;
 
+/**
+ */
+- (void)addOriginY:(CGFloat)newY;
+
+/**
+ */
+- (void)addSizeWidth:(CGFloat)newWidth;
+
+/**
+ */
+- (void)addSizeHeight:(CGFloat)newHeight;
 
 @end

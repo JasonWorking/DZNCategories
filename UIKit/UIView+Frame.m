@@ -66,4 +66,22 @@
     self.frame = f;
 }
 
+- (void)addOriginY:(CGFloat)newY {
+    CGRect f = self.frame;
+    f.origin.y += newY;
+    self.frame = f;
+}
+
+- (void)addSizeWidth:(CGFloat)newWidth {
+    CGRect f = self.frame;
+    f.size.width += newWidth;
+    self.frame = f;
+}
+
+- (void)addSizeHeight:(CGFloat)newHeight {
+    CGRect f = self.frame;
+    f.size.height += newHeight;
+    self.frame = f;
+}
+
 @end

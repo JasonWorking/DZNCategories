@@ -26,7 +26,7 @@
     
     UIBezierPath *bezierPath = [UIBezierPath bezierPathWithRoundedRect:layer.bounds
                                                      byRoundingCorners:corners
-                                                           cornerRadii:CGSizeMake(4.0, 4.0)];
+                                                           cornerRadii:CGSizeMake(radius, radius)];
     
     CAShapeLayer *shapeLayer = [CAShapeLayer layer];
     shapeLayer.frame = layer.bounds;
