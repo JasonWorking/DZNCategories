@@ -16,18 +16,4 @@
     else [self setObject:anObject forKey:aKey];
 }
 
-- (void)saveArrayToFile:(NSString *)filename;
-{
-    NSString *path = [NSString getLibraryDirectoryForFile:[NSString stringWithFormat:@"%@.plist",filename]];
-    NSLog(@"saveArrayToFile : %@",path);
-    [NSKeyedArchiver archiveRootObject:self toFile:path];
-}
-
-+ (NSMutableArray *)loadArrayfromFile:(NSString *)fileName
-{
-    NSString *path = [NSString getLibraryDirectoryForFile:[NSString stringWithFormat:@"%@.plist",fileName]];
-    NSLog(@"loadArrayfromFile : %@",path);
-    return [NSKeyedUnarchiver unarchiveObjectWithFile:path];
-}
-
 @end

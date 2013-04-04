@@ -10,10 +10,12 @@
 #import "NSObject+System.h"
 #import "NSString+Regex.h"
 #import "NSString+Security.h"
+#import "NSString+Path.h"
 #import "NSUserDefaults+Custom.h"
 #import "NSDictionary+Safe.h"
 #import "NSMutableDictionary+Safe.h"
 #import "NSArray+Query.h"
+#import "NSMutableArray+Save.h"
 
 // UIKit Categories
 #import "UIView+Frame.h"

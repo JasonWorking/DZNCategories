@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ * @brief Useful methods to ease NSArray queries.
+ */
 @interface NSArray (Query)
 
 /** Returns the object in the array at the first index value.
