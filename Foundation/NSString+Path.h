@@ -17,7 +17,7 @@
  * Returns a path string for a file located in a specific bundle.
  *
  * @param bundle The bundle containing the file.
- * @param fileName The file name with extension file included (ie: me.jpg)
+ * @param fileName The file name with extension file included (ie: image.jpg)
  * @returns The path string.
  */
 + (NSString *)getBundlePath:(NSBundle *)bundle forFile:(NSString *)fileName;
@@ -25,7 +25,7 @@
 /**
  * Returns a path string for a file located in the application's main bundle.
  *
- * @param fileName The file name with extension file included (ie: me.jpg)
+ * @param fileName The file name with extension file included (ie: image.jpg)
  * @returns The path string.
  */
 + (NSString *)getMainBundlePathForFile:(NSString *)fileName;
