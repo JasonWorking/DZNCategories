@@ -24,6 +24,8 @@
 #import "UIColor+Effect.h"
 #import "UIImage+Splash.h"
 #import "UIImage+Alpha.h"
+#import "UIImage+Resize.h"
+#import "UIImage+Effect.h"
 
 // CoreGraphics Categories
 #import "CGGeometry+Rect.h"

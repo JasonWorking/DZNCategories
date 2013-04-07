@@ -1,13 +1,16 @@
 //
 //  UIImage+Resize.h
-//  ADedo
 //
-//  Created by Ignacio on 4/7/13.
-//  Copyright (c) 2013 DZEN. All rights reserved.
+//  Created by Ignacio Romero Zurbuchen on 4/7/13.
+//  Copyright (c) 2011 DZen Interaktiv.
+//  Licence: MIT-Licence
 //
 
 #import <UIKit/UIKit.h>
 
+/**
+ * @brief 
+ */
 @interface UIImage (Resize)
 
 /**
