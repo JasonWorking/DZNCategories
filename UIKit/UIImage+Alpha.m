@@ -7,6 +7,7 @@
 //
 
 #import "UIImage+Alpha.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation UIImage (Alpha)
 
