@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ * @brief Easier way to retrieve your app's screenshot based the device type & orientation. 
+ */
 @interface UIImage (Splash)
 
 /**

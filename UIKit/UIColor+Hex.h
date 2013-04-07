@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ * @brief
+ */
 @interface UIColor (Hex)
 
 /**
