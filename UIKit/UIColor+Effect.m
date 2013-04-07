@@ -1,9 +1,9 @@
 //
-//  UIColor+Effect.m
-//  ADedo
+//  UIColor+Frame.m
 //
-//  Created by Ignacio on 3/25/13.
-//  Copyright (c) 2013 DZEN. All rights reserved.
+//  Created by Ignacio Romero Zurbuchen on 3/25/13.
+//  Copyright (c) 2011 DZen Interaktiv.
+//  Licence: MIT-Licence
 //
 
 #import "UIColor+Effect.h"
