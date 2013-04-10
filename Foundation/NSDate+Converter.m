@@ -26,7 +26,7 @@
     [dateFormatter setLocale:[NSLocale currentLocale]];
     [dateFormatter setDateFormat:format];
     
-    return [dateFormatter stringFromDate:self];
+    return [[dateFormatter stringFromDate:self] capitalizedString];
 }
 
 @end
