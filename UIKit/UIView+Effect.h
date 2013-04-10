@@ -4,13 +4,14 @@
 //  Created by Ignacio Romero Zurbuchen on 2/22/13.
 //  Copyright (c) 2011 DZen Interaktiv.
 //  Licence: MIT-Licence
+//  http://opensource.org/licenses/MIT
 //
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
 /**
- * @brief 
+ * @brief Special effects to be applied to UIView objects.
  */
 @interface UIView (Effect)
 

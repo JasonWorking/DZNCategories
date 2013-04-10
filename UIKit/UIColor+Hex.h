@@ -4,12 +4,13 @@
 //  Created by Ignacio Romero Zurbuchen on 2/25/13.
 //  Copyright (c) 2011 DZen Interaktiv.
 //  Licence: MIT-Licence
+//  http://opensource.org/licenses/MIT
 //
 
 #import <UIKit/UIKit.h>
 
 /**
- * @brief
+ * @brief Useful methods to create UIColor objects base on their base 16 (hexadecimal) codes.
  */
 @interface UIColor (Hex)
 

@@ -4,6 +4,7 @@
 //  Created by Ignacio Romero Zurbuchen on 11/25/12.
 //  Copyright (c) 2011 DZen Interaktiv.
 //  Licence: MIT-Licence
+//  http://opensource.org/licenses/MIT
 //
 
 #import <Foundation/Foundation.h>

@@ -4,12 +4,13 @@
 //  Created by Ignacio Romero Zurbuchen on 4/7/13.
 //  Copyright (c) 2011 DZen Interaktiv.
 //  Licence: MIT-Licence
+//  http://opensource.org/licenses/MIT
 //
 
 #import <UIKit/UIKit.h>
 
 /**
- * @brief 
+ * @brief Set of methods to crop and resize UIImage objects.
  */
 @interface UIImage (Resize)
 

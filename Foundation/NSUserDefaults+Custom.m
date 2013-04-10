@@ -4,6 +4,7 @@
 //  Created by Ignacio Romero Zurbuchen on 10/28/11.
 //  Copyright (c) 2011 DZen Interaktiv.
 //  Licence: MIT-Licence
+//  http://opensource.org/licenses/MIT
 //
 
 #import "NSUserDefaults+Custom.h"
