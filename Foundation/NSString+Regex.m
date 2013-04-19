@@ -27,4 +27,10 @@
     return [alphaNumbersSet isSupersetOfSet:stringSet];
 }
 
+- (BOOL)isValidUrl
+{
+    NSString *regex = @"(http|https):\\/\\/[\\w\\-_]+(\\.[\\w\\-_]+)+([\\w\\-\\.,@?^=%&amp;:/~\\+#]*[\\w\\-\\@?^=%&amp;/~\\+#])?";
+    return ([self rangeOfString:regex options:NSRegularExpressionSearch].location != NSNotFound);
+}
+
 @end

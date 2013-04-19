@@ -28,4 +28,11 @@
  */
 - (BOOL)isNumeric;
 
+/*
+ * Checks if the string is a valid URL.
+ *
+ * @returns YES if the string is a valid URL.
+ */
+- (BOOL)isValidUrl;
+
 @end
