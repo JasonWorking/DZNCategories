@@ -34,3 +34,7 @@
 #import "CGGeometry+Point.h"
 #import "CGGeometry+UIEdgeInsets.h"
 
+// CoreGraphics Location
+#import "CLLocation+Coordinate.h"
+
+

@@ -10,19 +10,19 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
-/**
- * @brief Special effects to be applied to UIView objects.
+/*
+ * Special effects to be applied to UIView objects.
  */
 @interface UIView (Effect)
 
-/**
+/*
  * Adds rounded corners to the specified radius.
  *
  * @params radius The value of the corner radius.
  */
 - (void)addCornerRadius:(CGFloat)radius;
 
-/**
+/*
  * Adds rounded corners to the specified radius.
  *
  * @params radius The value of the corner radius.
@@ -30,7 +30,7 @@
  */
 - (void)addCornerRadius:(CGFloat)radius forCorners:(UIRectCorner)corners;
 
-/**
+/*
  * Adds borders for any object that Inherits from UIView.
  *
  * @params color The color of the border.
@@ -39,12 +39,12 @@
  */
 - (void)addBorderWithColor:(UIColor *)color cornerRadius:(CGFloat)radius andWidth:(CGFloat)width;
 
-/**
+/*
  * Removes the border for any object that Inherits from UIView.
  */
 - (void)removeBorders;
 
-/**
+/*
  * Adds a shadow for any object that Inherits from UIView.
  *
  * @params offset The orientation offset of the shadow.
@@ -53,7 +53,7 @@
  */
 - (void)addShadowWithOffset:(CGSize)offset withOpacity:(CGFloat)opacity andRadius:(CGFloat)radius;
 
-/**
+/*
  * Adds a very performant drop shadow for any object that Inherits from UIView.
  *
  * @params offset The orientation offset of the shadow.
@@ -63,7 +63,7 @@
  */
 - (void)addPathShadowWithOffset:(CGSize)offset opacity:(CGFloat)opacity andRadius:(CGFloat)radius andFrame:(CGRect)frame;
 
-/**
+/*
  * Adds a very performant white emboss for any object that Inherits from UIView.
  *
  * @params offset The orientation offset of the shadow.
@@ -73,7 +73,7 @@
  */
 - (void)addPathEmbossWithOffset:(CGSize)offset opacity:(CGFloat)opacity andRadius:(CGFloat)radius andFrame:(CGRect)frame;
 
-/**
+/*
  * Adds a white emboss for any object that Inherits from UIView.
  *
  * @params offset The orientation offset of the shadow.
@@ -81,7 +81,7 @@
  */
 - (void)addEmbossWithOffset:(CGSize)offset withOpacity:(CGFloat)opacity;
 
-/**
+/*
  * Adds a glow effect for any object that Inherits from UIView.
  *
  * @params color The color of the glow.
@@ -89,12 +89,12 @@
  */
 - (void)addGlowEffectWithColor:(UIColor *)color andOpacity:(CGFloat)opacity;
 
-/**
+/*
  * Removes the shadow/glow effect for any object that Inherits from UIView.
  */
 - (void)removeEffect;
 
-/**
+/*
  * Sets the view to be rasterized to the device's scale.
  */
 - (void)rasterize;

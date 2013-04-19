@@ -9,12 +9,12 @@
 
 #import <Foundation/Foundation.h>
 
-/**
- * @brief Safe methods for saving and retrieving data from a NSDictionary.
+/*
+ * Safe methods for saving and retrieving data from a NSDictionary.
  */
 @interface NSDictionary (Safe)
 
-/** Returns the none-nil value associated with a given key.
+/* Returns the none-nil value associated with a given key.
  * @params aKey The key for which to return the corresponding value.
  * @returns The none-nil value associated with aKey.
  */

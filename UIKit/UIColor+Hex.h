@@ -9,12 +9,12 @@
 
 #import <UIKit/UIKit.h>
 
-/**
- * @brief Useful methods to create UIColor objects base on their base 16 (hexadecimal) codes.
+/*
+ * Useful methods to create UIColor objects base on their base 16 (hexadecimal) codes.
  */
 @interface UIColor (Hex)
 
-/**
+/*
  * Returns a color based on the hex code string.
  *
  * @params hexString The hex string.
@@ -22,7 +22,7 @@
  */
 + (UIColor *)colorFromHex:(NSString *)hex;
 
-/**
+/*
  * Returns a color based on the hex code string plus an alpha value.
  *
  * @params hexString The hex string.
@@ -31,7 +31,7 @@
  */
 + (UIColor *)colorFromHex:(NSString *)hex alpha:(CGFloat)alpha;
 
-/**
+/*
  * Returns a the hex string equivalent to a color.
  *
  * @returns A hex string.

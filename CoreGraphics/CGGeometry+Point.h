@@ -9,17 +9,17 @@
 
 #import <CoreGraphics/CoreGraphics.h>
 
-/**
- *
+/*
+ * Returns a proportionnaly scaled point.
  */
 CGPoint CGPointScale(CGPoint point, CGFloat scale);
 
-/**
+/*
  * Returns the center point of the given rectangle.
  */
 CGPoint CGRectCenterPoint(CGRect rect);
 
-/**
+/*
  * Return true if `point' is empty (that is, if it has zero width and height).
  * Return false otherwise. A null point is defined to be empty.
  */

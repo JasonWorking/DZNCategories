@@ -8,6 +8,7 @@
 //
 
 #import "UIImage+Effect.h"
+#import "NSObject+System.h"
 #import <QuartzCore/QuartzCore.h>
 
 @implementation UIImage (Effect)
@@ -16,10 +17,10 @@
 {
     //// Draws the masked over the background colored image.
     UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0);
-    CGContextRef newcontext = UIGraphicsGetCurrentContext();
+
 	CGColorSpaceRef colorSpace;
 	colorSpace = CGColorSpaceCreateDeviceRGB();
-	newcontext = CGBitmapContextCreate(NULL, self.size.width, self.size.height, 8, 0, colorSpace, kCGImageAlphaPremultipliedLast);
+	CGContextRef newcontext = CGBitmapContextCreate(NULL, self.size.width, self.size.height, 8, 0, colorSpace, kCGImageAlphaPremultipliedLast);
 	CGColorSpaceRelease(colorSpace);
 	
 	if (newcontext == NULL) return nil;

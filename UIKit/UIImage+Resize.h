@@ -9,12 +9,12 @@
 
 #import <UIKit/UIKit.h>
 
-/**
- * @brief Set of methods to crop and resize UIImage objects.
+/*
+ * Set of methods to crop and resize UIImage objects.
  */
 @interface UIImage (Resize)
 
-/**
+/*
  * Scales the image to the specified rect size.
  *
  * @params rect The rect to which the image should be scaled.
@@ -22,11 +22,11 @@
  */
 - (UIImage *)imageAtRect:(CGRect)rect;
 
-/**
+/*
  */
 - (UIImage *)imageScaledFittingToSize:(CGSize)size;
 
-/**
+/*
  * Scales proportionally the image to the specified size.
  *
  * @params targetSize The size to which the image should proportionally be scaled.
@@ -34,7 +34,7 @@
  */
 - (UIImage *)imageByScalingProportionallyToSize:(CGSize)targetSize;
 
-/**
+/*
  * Checks if the image as an alpha channel.
  */
 - (BOOL)isProportionalToSize:(CGSize)size;

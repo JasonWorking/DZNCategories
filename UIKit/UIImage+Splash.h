@@ -9,19 +9,19 @@
 
 #import <UIKit/UIKit.h>
 
-/**
- * @brief Easier way to retrieve your app's screenshot based the device type & orientation. 
+/*
+ * Easier way to retrieve your app's screenshot based the device type & orientation. 
  */
 @interface UIImage (Splash)
 
-/**
+/*
  * Returns the appropriate splash image based on the device type
  *
  * @returns A the original splash screen image.
  */
 + (UIImage *)splashImage;
 
-/**
+/*
  * Returns the appropriate splash image based on the device type and orientation.
  *
  * @params orientation The orientation of the device.

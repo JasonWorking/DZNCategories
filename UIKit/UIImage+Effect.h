@@ -9,20 +9,20 @@
 
 #import <UIKit/UIKit.h>
 
-/**
- * @brief Special effects to be applied to UIImage objects.
+/*
+ * Special effects to be applied to UIImage objects.
  */
 @interface UIImage (Effect)
 
-/**
+/*
  */
 - (UIImage *)imageWithMask:(UIImage *)maskImg;
 
-/**
+/*
  */
 + (UIImage *)imageWithColor:(UIColor *)color andSize:(CGSize)size;
 
-/**
+/*
  * Transforms the image to grayscale.
  *
  * @returns The new grayscale image.

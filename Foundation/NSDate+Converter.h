@@ -15,12 +15,12 @@ static NSString * const kNSDateFormatTime = @"HH:mm:ss";
 static NSString * const kNSDateFormatShortTime = @"HH:mm";
 static NSString * const kNSDateFormatShortDate = @"MMM d";
 
-/**
- * @brief Useful methods for converting dates from/to string.
+/*
+ * Useful methods for converting dates from/to string.
  */
 @interface NSDate (Converter)
 
-/**
+/*
  * Returns a date object from string and specified format.
  *
  * @params string The string date.
@@ -29,7 +29,7 @@ static NSString * const kNSDateFormatShortDate = @"MMM d";
  */
 + (NSDate *)dateFromString:(NSString *)string andFormat:(NSString *)format;
 
-/**
+/*
  * Returns a string from a date object and specified format.
  *
  * @params format The date format string.
