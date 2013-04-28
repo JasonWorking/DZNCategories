@@ -14,6 +14,13 @@
  */
 @interface NSMutableDictionary (Safe)
 
+/* Returns the none-nil value associated with a given key.
+ *
+ * @params aKey The key for which to return the corresponding value.
+ * @returns The none-nil value associated with aKey.
+ */
+- (id)safeObjectForKey:(id)aKey;
+
 /* Adds a given safe key-value pair to the dictionary.
  *
  * @params anObject The none-nil value for aKey. A strong reference to the object is maintained by the dictionary. Raises an NSInvalidArgumentException if anObject is nil. If the value is nil value, sets automatically a NSNull reference instead.

@@ -1,9 +1,10 @@
 //
 //  CLLocation+Coordinate.m
-//  GeoFeed
 //
-//  Created by Ignacio on 4/18/13.
-//  Copyright (c) 2013 DZEN. All rights reserved.
+//  Created by Ignacio Romero Zurbuchen on 4/18/13.
+//  Copyright (c) 2011 DZen Interaktiv.
+//  Licence: MIT-Licence
+//  http://opensource.org/licenses/MIT
 //
 
 #import "CLLocation+Coordinate.h"
@@ -70,6 +71,7 @@ CLLocationCoordinateRect CLLocationCoordinateRectWithPreset(CLLocationCoordinate
     }
 }
 
+//TODO: Fix because it doesn't really work...
 CLLocationCoordinateRect CLLocationCoordinateRectFromCenter(CLLocationCoordinate2D center, CLLocationDistance radius)
 {
     CLLocationCoordinateRect result;

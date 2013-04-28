@@ -20,6 +20,11 @@ CGPoint CGRectCenterPoint(CGRect rect)
                        CGRectGetMinY(rect) + CGRectGetHeight(rect)/2);
 }
 
+CGPoint CGPointAddY(CGPoint point, CGFloat y)
+{
+    return CGPointMake(point.x, point.y + y);
+}
+
 bool CGPointIsEmpty(CGPoint point)
 {
     return (point.x == 0 && point.y == 0) ? true : false;

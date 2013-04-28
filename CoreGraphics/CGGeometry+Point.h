@@ -19,6 +19,8 @@ CGPoint CGPointScale(CGPoint point, CGFloat scale);
  */
 CGPoint CGRectCenterPoint(CGRect rect);
 
+CGPoint CGPointAddY(CGPoint point, CGFloat y);
+
 /*
  * Return true if `point' is empty (that is, if it has zero width and height).
  * Return false otherwise. A null point is defined to be empty.

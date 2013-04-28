@@ -15,8 +15,10 @@
 #import "NSUserDefaults+Custom.h"
 #import "NSDictionary+Safe.h"
 #import "NSMutableDictionary+Safe.h"
+#import "NSArray+Safe.h"
 #import "NSArray+Query.h"
 #import "NSMutableArray+Save.h"
+#import "NSURL+Query.h"
 
 // UIKit Categories
 #import "UIView+Frame.h"
@@ -27,6 +29,7 @@
 #import "UIImage+Alpha.h"
 #import "UIImage+Resize.h"
 #import "UIImage+Effect.h"
+#import "UIScrollView+Scroll.h"
 
 // CoreGraphics Categories
 #import "CGGeometry+Rect.h"
