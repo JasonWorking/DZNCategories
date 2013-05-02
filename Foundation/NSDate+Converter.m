@@ -22,9 +22,14 @@
 
 - (NSString *)stringFromDateWithFormat:(NSString *)format
 {
+    return [self stringFromDateWithFormat:format andLocale:[NSLocale currentLocale]];
+}
+
+- (NSString *)stringFromDateWithFormat:(NSString *)format andLocale:(NSLocale *)locale
+{
     if (!self) return @"";
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setLocale:[NSLocale currentLocale]];
+    [dateFormatter setLocale:locale];
     [dateFormatter setDateFormat:format];
     
     return [[dateFormatter stringFromDate:self] capitalizedString];
