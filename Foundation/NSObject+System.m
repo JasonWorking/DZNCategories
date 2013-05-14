@@ -84,7 +84,7 @@
 
 + (NSString *)appName
 {
-    return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"];
+    return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
 }
 
 + (NSString *)appVersion
