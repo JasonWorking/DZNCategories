@@ -24,7 +24,7 @@
 /*
  * Returns the appropriate splash image based on the device type and orientation.
  *
- * @params orientation The orientation of the device.
+ * @param orientation The orientation of the device.
  * @returns A the original splash screen image.
  */
 + (UIImage *)splashImageForInterfaceOrientation:(UIInterfaceOrientation)orientation;

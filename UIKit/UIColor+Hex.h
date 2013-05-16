@@ -17,7 +17,7 @@
 /*
  * Returns a color based on the hex code string.
  *
- * @params hexString The hex string.
+ * @param hexString The hex string.
  * @returns A hex color.
  */
 + (UIColor *)colorFromHex:(NSString *)hex;
@@ -25,8 +25,8 @@
 /*
  * Returns a color based on the hex code string plus an alpha value.
  *
- * @params hexString The hex string.
- * @params alpha The alpha value of the color.
+ * @param hexString The hex string.
+ * @param alpha The alpha value of the color.
  * @returns A hex color.
  */
 + (UIColor *)colorFromHex:(NSString *)hex alpha:(CGFloat)alpha;

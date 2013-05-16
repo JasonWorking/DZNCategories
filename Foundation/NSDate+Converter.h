@@ -24,8 +24,8 @@ static NSString * const kNSDateFormatShortDate = @"MMMM d";
 /*
  * Returns a date object from string and specified format.
  *
- * @params string The string date.
- * @params format The date format string.
+ * @param string The string date.
+ * @param format The date format string.
  * @returns A new date from string and format.
  */
 + (NSDate *)dateFromString:(NSString *)string andFormat:(NSString *)format;
@@ -33,7 +33,7 @@ static NSString * const kNSDateFormatShortDate = @"MMMM d";
 /*
  * Returns a string from a date object with a specified format and current user's locale.
  *
- * @params format The date format string.
+ * @param format The date format string.
  * @returns A string from date.
  */
 - (NSString *)stringFromDateWithFormat:(NSString *)format;
@@ -41,8 +41,8 @@ static NSString * const kNSDateFormatShortDate = @"MMMM d";
 /*
  * Returns a string from a date object with a specified format and locale.
  *
- * @params format The date format string.
- * @params locale The specified locale.
+ * @param format The date format string.
+ * @param locale The specified locale.
  * @returns A string from date.
  */
 - (NSString *)stringFromDateWithFormat:(NSString *)format andLocale:(NSLocale *)locale;

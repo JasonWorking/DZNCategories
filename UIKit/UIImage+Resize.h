@@ -17,7 +17,7 @@
 /*
  * Scales the image to the specified rect size.
  *
- * @params rect The rect to which the image should be scaled.
+ * @param rect The rect to which the image should be scaled.
  * @returns A new scaled image.
  */
 - (UIImage *)imageAtRect:(CGRect)rect;
@@ -29,7 +29,7 @@
 /*
  * Scales proportionally the image to the specified size.
  *
- * @params targetSize The size to which the image should proportionally be scaled.
+ * @param targetSize The size to which the image should proportionally be scaled.
  * @returns A new scaled image.
  */
 - (UIImage *)imageByScalingProportionallyToSize:(CGSize)targetSize;

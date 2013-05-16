@@ -16,7 +16,7 @@
 
 /* Returns the none-nil value associated with a given key.
  *
- * @params aKey The key for which to return the corresponding value.
+ * @param aKey The key for which to return the corresponding value.
  * @returns The none-nil value associated with aKey.
  */
 - (id)safeObjectForKey:(id)aKey;

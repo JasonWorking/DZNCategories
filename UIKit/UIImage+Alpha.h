@@ -36,7 +36,7 @@
 /*
  * Fills the alpha channel with a custom color.
  *
- * @params color The custom color of the alpha channel
+ * @param color The custom color of the alpha channel
  * @returns A new alpha-filled image.
  */
 - (UIImage *)fillAlphaWithColor:(UIColor *)color;

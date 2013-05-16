@@ -15,7 +15,7 @@
 
 /* Returns a value associated with a given index, safely without exceeding bounds.
  *
- * @params index An index within the bounds of the array.
+ * @param index An index within the bounds of the array.
  * @returns Returns the object located at index.
  */
 - (id)safeObjectAtIndex:(NSUInteger)index;

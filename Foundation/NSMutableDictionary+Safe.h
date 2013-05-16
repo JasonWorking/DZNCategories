@@ -16,15 +16,15 @@
 
 /* Returns the none-nil value associated with a given key.
  *
- * @params aKey The key for which to return the corresponding value.
+ * @param aKey The key for which to return the corresponding value.
  * @returns The none-nil value associated with aKey.
  */
 - (id)safeObjectForKey:(id)aKey;
 
 /* Adds a given safe key-value pair to the dictionary.
  *
- * @params anObject The none-nil value for aKey. A strong reference to the object is maintained by the dictionary. Raises an NSInvalidArgumentException if anObject is nil. If the value is nil value, sets automatically a NSNull reference instead.
- * @params aKey The key for value. The key is copied (using copyWithZone:; keys must conform to the NSCopying protocol). Raises an NSInvalidArgumentException if aKey is nil. If aKey already exists in the dictionary anObject takes its place.
+ * @param anObject The none-nil value for aKey. A strong reference to the object is maintained by the dictionary. Raises an NSInvalidArgumentException if anObject is nil. If the value is nil value, sets automatically a NSNull reference instead.
+ * @param aKey The key for value. The key is copied (using copyWithZone:; keys must conform to the NSCopying protocol). Raises an NSInvalidArgumentException if aKey is nil. If aKey already exists in the dictionary anObject takes its place.
  */
 - (void)setSafeObject:(id)anObject forKey:(id <NSCopying>)aKey;
 
