@@ -82,6 +82,11 @@
     else return 1.0;
 }
 
++ (NSString *)bundleName
+{
+    return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"];
+}
+
 + (NSString *)appName
 {
     return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];

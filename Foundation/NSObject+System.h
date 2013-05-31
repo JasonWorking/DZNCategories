@@ -70,7 +70,13 @@
  */
 + (float)density;
 
-/* Returns the app bundle name.
+/* Returns the bundle name.
+ *
+ * @returns The bundle name.
+ */
++ (NSString *)bundleName;
+
+/* Returns the app display name.
  *
  * @returns The app name.
 */
