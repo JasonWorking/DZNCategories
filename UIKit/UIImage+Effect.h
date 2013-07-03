@@ -23,6 +23,10 @@
 + (UIImage *)imageWithColor:(UIColor *)color andSize:(CGSize)size;
 
 /*
+ */
++ (UIImage *)imageNamed:(NSString *)name andColored:(UIColor *)color;
+
+/*
  * Transforms the image to grayscale.
  *
  * @returns The new grayscale image.

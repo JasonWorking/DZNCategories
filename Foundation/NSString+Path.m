@@ -1,6 +1,5 @@
 //
 //  NSString+Path.m
-//  ADedo
 //
 //  Created by Ignacio on 4/4/13.
 //  Copyright (c) 2013 DZEN. All rights reserved.

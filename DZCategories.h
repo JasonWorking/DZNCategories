@@ -12,6 +12,7 @@
 #import "NSString+Regex.h"
 #import "NSString+Security.h"
 #import "NSString+Path.h"
+#import "NSString+Case.h"
 #import "NSUserDefaults+Custom.h"
 #import "NSDictionary+Safe.h"
 #import "NSMutableDictionary+Safe.h"

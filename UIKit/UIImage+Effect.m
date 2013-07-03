@@ -8,6 +8,7 @@
 //
 
 #import "UIImage+Effect.h"
+#import "UIColor+Hex.h"
 #import "NSObject+System.h"
 #import <QuartzCore/QuartzCore.h>
 
@@ -20,15 +21,17 @@
 
 	CGColorSpaceRef colorSpace;
 	colorSpace = CGColorSpaceCreateDeviceRGB();
-	CGContextRef newcontext = CGBitmapContextCreate(NULL, self.size.width, self.size.height, 8, 0, colorSpace, kCGImageAlphaPremultipliedLast);
+	CGContextRef context = CGBitmapContextCreate(NULL, self.size.width, self.size.height, 8, 0, colorSpace, kCGImageAlphaPremultipliedLast);
+    CGContextSetAllowsAntialiasing(context, true);
+    CGContextSetShouldAntialias(context, true);
 	CGColorSpaceRelease(colorSpace);
 	
-	if (newcontext == NULL) return nil;
+	if (context == NULL) return nil;
 	
-	CGContextClipToMask(newcontext, CGRectMake(0, 0, self.size.width, self.size.height), maskImg.CGImage);
-	CGContextDrawImage(newcontext, CGRectMake(0, 0, self.size.width, self.size.height), self.CGImage);
-	CGImageRef mainViewContentBitmapContext = CGBitmapContextCreateImage(newcontext);
-	CGContextRelease(newcontext);
+	CGContextClipToMask(context, CGRectMake(0, 0, self.size.width, self.size.height), maskImg.CGImage);
+	CGContextDrawImage(context, CGRectMake(0, 0, self.size.width, self.size.height), self.CGImage);
+	CGImageRef mainViewContentBitmapContext = CGBitmapContextCreateImage(context);
+	CGContextRelease(context);
 	UIImage *maskedImg = [UIImage imageWithCGImage:mainViewContentBitmapContext];
 	CGImageRelease(mainViewContentBitmapContext);
     
@@ -51,6 +54,27 @@
     UIGraphicsEndImageContext();
     
     return image;
+}
+
++ (UIImage *)imageNamed:(NSString *)name andColored:(UIColor *)color
+{
+    CGFloat scale = [UIScreen mainScreen].scale;
+    
+    NSString *cacheDirectory = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *hex = [color hexFromColor];
+    NSString *path = [cacheDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@_%@",name,hex]];
+    if (scale == 2.0) path = [path stringByAppendingString:@"@2x"];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
+        UIImage *tempImg = [UIImage imageNamed:name];
+        CGSize size = CGSizeMake(tempImg.size.width, tempImg.size.height);
+        UIImage *colorImg = [UIImage imageWithColor:color andSize:size];
+        UIImage *image = [colorImg imageWithMask:tempImg];
+        [UIImagePNGRepresentation(image) writeToFile:path atomically:YES];
+    }
+        
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    return [UIImage imageWithData:data scale:scale];
 }
 
 - (UIImage *)imageToGrayscale

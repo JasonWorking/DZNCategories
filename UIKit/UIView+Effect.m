@@ -40,14 +40,10 @@
 {
     self.layer.borderWidth = width;
     self.layer.cornerRadius = radius;
-    self.layer.edgeAntialiasingMask = kCALayerLeftEdge | kCALayerRightEdge | kCALayerBottomEdge | kCALayerTopEdge;
-    self.clipsToBounds = YES;
-    self.layer.masksToBounds = YES;
-    
-    CGColorSpaceRef space = CGColorSpaceCreateDeviceRGB();
-    CGColorRef cgColor = [color CGColor];
-    self.layer.borderColor = cgColor;
-    CGColorSpaceRelease(space);
+    self.layer.borderColor = color.CGColor;
+//    self.layer.edgeAntialiasingMask = kCALayerLeftEdge | kCALayerRightEdge | kCALayerBottomEdge | kCALayerTopEdge;
+//    self.clipsToBounds = YES;
+//    self.layer.masksToBounds = YES;
     
     [self rasterize];
 }
