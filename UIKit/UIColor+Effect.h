@@ -28,4 +28,11 @@
  */
 - (UIColor *)lighterColor;
 
+/*
+ * Returns a totally random color.
+ *
+ * @returns A random color.
+ */
+- (UIColor *)randomColor;
+
 @end
