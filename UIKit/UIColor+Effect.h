@@ -33,6 +33,6 @@
  *
  * @returns A random color.
  */
-- (UIColor *)randomColor;
++ (UIColor *)randomColor;
 
 @end

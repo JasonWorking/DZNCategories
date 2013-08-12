@@ -22,15 +22,12 @@
 
 - (void)addCornerRadius:(CGFloat)radius forCorners:(UIRectCorner)corners
 {
-    CALayer *layer = self.layer;
-    [layer setShouldRasterize:YES];
-    
-    UIBezierPath *bezierPath = [UIBezierPath bezierPathWithRoundedRect:layer.bounds
+    UIBezierPath *bezierPath = [UIBezierPath bezierPathWithRoundedRect:self.layer.bounds
                                                      byRoundingCorners:corners
                                                            cornerRadii:CGSizeMake(radius, radius)];
     
     CAShapeLayer *shapeLayer = [CAShapeLayer layer];
-    shapeLayer.frame = layer.bounds;
+    shapeLayer.frame = self.layer.bounds;
     shapeLayer.path = bezierPath.CGPath;
     [self.layer setMask:shapeLayer];
     [self rasterize];

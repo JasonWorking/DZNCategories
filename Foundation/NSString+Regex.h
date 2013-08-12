@@ -35,4 +35,9 @@
  */
 - (BOOL)isValidUrl;
 
+/*
+ *
+ */
+- (BOOL)isBackSpace;
+
 @end

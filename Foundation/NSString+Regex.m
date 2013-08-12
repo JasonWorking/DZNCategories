@@ -33,4 +33,10 @@
     return ([self rangeOfString:regex options:NSRegularExpressionSearch].location != NSNotFound);
 }
 
+#warning Incomplete Implementation
+- (BOOL)isBackSpace
+{
+    return NO;
+}
+
 @end

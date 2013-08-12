@@ -35,4 +35,32 @@
     return [[dateFormatter stringFromDate:self] capitalizedString];
 }
 
+#warning Incomplete Implementation
+- (NSDate *)dateInDays:(NSUInteger)days
+{
+    return nil;
+}
+
+#warning Incomplete Implementation
++ (NSDate *)dateForDay:(NSUInteger)day month:(NSUInteger)month andYear:(NSUInteger)year
+{
+    return nil;
+}
+
+#warning Untested Implementation
+- (NSDate *)localTime
+{
+    NSTimeZone *tz = [NSTimeZone defaultTimeZone];
+    NSInteger seconds = [tz secondsFromGMTForDate:self];
+    return [NSDate dateWithTimeInterval:seconds sinceDate:self];
+}
+
+#warning Untested Implementation
+- (NSDate *)globalTime
+{
+    NSTimeZone *tz = [NSTimeZone defaultTimeZone];
+    NSInteger seconds = -[tz secondsFromGMTForDate:self];
+    return [NSDate dateWithTimeInterval:seconds sinceDate:self];
+}
+
 @end

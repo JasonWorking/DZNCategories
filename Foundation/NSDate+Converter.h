@@ -12,9 +12,11 @@
 static NSString * const kNSDateFormatDateLarge = @"EEE MMM dd HH:mm:ss Z yyyy";
 static NSString * const kNSDateFormatDateFull = @"yyyy-MM-dd'T'HH:mm:ss";
 static NSString * const kNSDateFormatDate = @"yyyy-MM-dd";
+static NSString * const kNSDateFormatMonthAndYear = @"MM yyyy";
 static NSString * const kNSDateFormatTime = @"HH:mm:ss";
 static NSString * const kNSDateFormatShortTime = @"HH:mm";
 static NSString * const kNSDateFormatShortDate = @"MMMM d";
+static NSString * const kNSDateFormatShortDay = @"d";
 
 /*
  * Useful methods for converting dates from/to string.
@@ -46,5 +48,25 @@ static NSString * const kNSDateFormatShortDate = @"MMMM d";
  * @returns A string from date.
  */
 - (NSString *)stringFromDateWithFormat:(NSString *)format andLocale:(NSLocale *)locale;
+
+/*
+ *
+ */
+- (NSDate *)dateInDays:(NSUInteger)days;
+
+/*
+ *
+ */
++ (NSDate *)dateForDay:(NSUInteger)day month:(NSUInteger)month andYear:(NSUInteger)year;
+
+/*
+ *
+ */
+- (NSDate *)localTime;
+
+/*
+ *
+ */
+- (NSDate *)globalTime;
 
 @end

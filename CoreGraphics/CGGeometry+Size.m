@@ -19,6 +19,13 @@ CGSize CGSizeSquare(CGFloat square)
 	return CGSizeMake(square, square);
 }
 
+CGSize CGSizeFromTwoPoints(CGPoint point1, CGPoint point2)
+{
+    CGFloat width = abs(roundf(point1.x)-roundf(point2.x));
+    CGFloat height = abs(roundf(point1.y)-roundf(point2.y));
+    return CGSizeMake(width, height);
+}
+
 bool CGSizeIsEmpty(CGSize size)
 {
     return (size.width == 0 && size.height == 0) ? true : false;
