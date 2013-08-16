@@ -7,38 +7,46 @@
 //
 
 #import "NSDate+Comparison.h"
+#import "NSDate+Converter.h"
+#import "NSDate+Calendar.h"
 
 @implementation NSDate (Comparison)
 
 - (BOOL)isToday
 {
-    NSCalendar *cal = [NSCalendar currentCalendar];
-    NSDateComponents *components = [cal components:(NSEraCalendarUnit | NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:[NSDate date]];
-    NSDate *today = [cal dateFromComponents:components];
+    NSCalendar *cal = [NSDate userCalendar];
+    NSDate *today = [NSDate today];
     
-    components = [cal components:(NSEraCalendarUnit | NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:self];
+    NSDateComponents *components = [cal components:[NSDate dayCalendarComponents] fromDate:self];
     NSDate *otherDate = [cal dateFromComponents:components];
 
     return ([today compare:otherDate] == NSOrderedSame);
 }
 
-#warning Incomplete Implementation
 - (BOOL)isYesterday
 {
-    NSCalendar *cal = [NSCalendar currentCalendar];
+    NSCalendar *cal = [NSDate userCalendar];
+    NSDate *yesterday = [NSDate yesterday];
     
-    NSDate *date = [NSDate date];
-    NSDateComponents *comps = [cal components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:date];
-    NSDate *today = [cal dateFromComponents:comps];
-    
-    NSDateComponents *components = [[NSDateComponents alloc] init];
-    [components setDay:-1];
-    NSDate *yesterday = [cal dateByAddingComponents:components toDate:today options:0];
-    
-    components = [cal components:(NSEraCalendarUnit | NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:self];
+    NSDateComponents *components = [cal components:[NSDate dayCalendarComponents] fromDate:self];
     NSDate *otherDate = [cal dateFromComponents:components];
     
     return ([yesterday compare:otherDate] == NSOrderedSame);
 }
+
+- (BOOL)isFirstDayOfMonth
+{
+    NSCalendar *cal = [NSDate userCalendar];
+    
+    NSDateComponents *components = [cal components:[NSDate dayCalendarComponents] fromDate:self];
+    [components setDay:1];
+    NSDate *firstDayOfMonthDate = [cal dateFromComponents:components];
+    
+    components = [cal components:[NSDate dayCalendarComponents] fromDate:self];
+    NSDate *otherDate = [cal dateFromComponents:components];
+    
+    return ([firstDayOfMonthDate compare:otherDate] == NSOrderedSame);
+}
+
 
 @end

@@ -26,8 +26,12 @@
 {
     [NSDate_Comparison testIsToday];
     [NSDate_Comparison testIsNotToday];
-    [NSDate_Comparison testIsTomorrow];
-    [NSDate_Comparison testIsNotTomorrow];
+    
+    [NSDate_Comparison testIsYesterday];
+    [NSDate_Comparison testIsNotYesterday];
+    
+    [NSDate_Comparison testIsFirstDayOfMonth];
+    [NSDate_Comparison testIsNotFirstDayOfMonth];
 }
 
 + (void)testNSDateConverter

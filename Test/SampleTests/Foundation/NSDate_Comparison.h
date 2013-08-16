@@ -12,7 +12,11 @@
 
 + (void)testIsToday;
 + (void)testIsNotToday;
-+ (void)testIsTomorrow;
-+ (void)testIsNotTomorrow;
+
++ (void)testIsYesterday;
++ (void)testIsNotYesterday;
+
++ (void)testIsFirstDayOfMonth;
++ (void)testIsNotFirstDayOfMonth;
 
 @end

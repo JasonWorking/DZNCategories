@@ -8,6 +8,8 @@
 
 #import "NSDate_Comparison.h"
 #import "NSDate+Comparison.h"
+#import "NSDate+Converter.h"
+#import "NSDate+Calendar.h"
 
 @implementation NSDate_Comparison
 
@@ -24,18 +26,29 @@
     NSAssert(![aDate isToday], @"NSDate+Comparison: @testIsNotToday");
 }
 
-+ (void)testIsTomorrow
++ (void)testIsYesterday
 {
     NSTimeInterval day = 60*60*24;
     NSDate *aDate = [NSDate dateWithTimeInterval:-day sinceDate:[NSDate new]];
-    NSAssert([aDate isYesterday], @"NSDate+Comparison: @testIsTomorrow");
+    NSAssert([aDate isYesterday], @"NSDate+Comparison: @testIsYesterday");
 }
 
-+ (void)testIsNotTomorrow
++ (void)testIsNotYesterday
 {
-    NSTimeInterval day = 60*60*24*5;
-    NSDate *aDate = [NSDate dateWithTimeInterval:-day sinceDate:[NSDate new]];
-    NSAssert(![aDate isYesterday], @"NSDate+Comparison: @testIsNotTomorrow");
+    NSDate *aDate = [NSDate today];
+    NSAssert(![aDate isYesterday], @"NSDate+Comparison: @testIsNotYesterday");
+}
+
++ (void)testIsFirstDayOfMonth
+{
+    NSDate *aDate = [NSDate dateForDay:1 month:3 andYear:2013];
+    NSAssert(![aDate isFirstDayOfMonth], @"NSDate+Comparison: @testIsFirstDayOfMonth");
+}
+
++ (void)testIsNotFirstDayOfMonth
+{
+    NSDate *aDate = [NSDate dateForDay:5 month:3 andYear:2013];
+    NSAssert(![aDate isFirstDayOfMonth], @"NSDate+Comparison: @testIsNotFirstDayOfMonth");
 }
 
 @end

@@ -8,6 +8,7 @@
 //
 
 #import "NSDate+Converter.h"
+#import "NSArray+Query.h"
 
 @implementation NSDate (Converter)
 
@@ -22,7 +23,9 @@
 
 - (NSString *)stringFromDateWithFormat:(NSString *)format
 {
-    return [self stringFromDateWithFormat:format andLocale:[NSLocale currentLocale]];
+    NSString *localeIdentifier = [[NSLocale preferredLanguages] firstObject];
+    NSLocale *userLocale = [[NSLocale alloc] initWithLocaleIdentifier:localeIdentifier];
+    return [self stringFromDateWithFormat:format andLocale:userLocale];
 }
 
 - (NSString *)stringFromDateWithFormat:(NSString *)format andLocale:(NSLocale *)locale
@@ -35,19 +38,31 @@
     return [[dateFormatter stringFromDate:self] capitalizedString];
 }
 
-#warning Incomplete Implementation
 - (NSDate *)dateInDays:(NSUInteger)days
 {
-    return nil;
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    [components setDay:days];
+    
+    return [cal dateByAddingComponents:components toDate:self options:0];
 }
 
-#warning Incomplete Implementation
++ (NSDate *)firstDayFromMonth:(NSUInteger)month andYear:(NSUInteger)year
+{
+    return [NSDate dateForDay:1 month:month andYear:year];
+}
+
 + (NSDate *)dateForDay:(NSUInteger)day month:(NSUInteger)month andYear:(NSUInteger)year
 {
-    return nil;
+    NSDateComponents *comps = [[NSDateComponents alloc] init];
+    [comps setDay:day];
+    [comps setMonth:month];
+    [comps setYear:year];
+    
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:[[NSCalendar currentCalendar] calendarIdentifier]];
+    return [calendar dateFromComponents:comps];
 }
 
-#warning Untested Implementation
 - (NSDate *)localTime
 {
     NSTimeZone *tz = [NSTimeZone defaultTimeZone];
@@ -55,7 +70,6 @@
     return [NSDate dateWithTimeInterval:seconds sinceDate:self];
 }
 
-#warning Untested Implementation
 - (NSDate *)globalTime
 {
     NSTimeZone *tz = [NSTimeZone defaultTimeZone];
