@@ -65,16 +65,22 @@
     NSString *path = [cacheDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@_%@",name,hex]];
     if (scale == 2.0) path = [path stringByAppendingString:@"@2x"];
     
+    path = [path stringByAppendingString:@".png"];
+    
     if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
-        UIImage *tempImg = [UIImage imageNamed:name];
-        CGSize size = CGSizeMake(tempImg.size.width, tempImg.size.height);
-        UIImage *colorImg = [UIImage imageWithColor:color andSize:size];
-        UIImage *image = [colorImg imageWithMask:tempImg];
+        UIImage *image = [[UIImage imageNamed:name] coloredImage:color];
         [UIImagePNGRepresentation(image) writeToFile:path atomically:YES];
     }
         
     NSData *data = [NSData dataWithContentsOfFile:path];
     return [UIImage imageWithData:data scale:scale];
+}
+
+- (UIImage *)coloredImage:(UIColor *)color
+{
+    CGSize size = CGSizeMake(self.size.width, self.size.height);
+    UIImage *colorImg = [UIImage imageWithColor:color andSize:size];
+    return [colorImg imageWithMask:self];
 }
 
 - (UIImage *)imageToGrayscale
@@ -92,6 +98,47 @@
     UIGraphicsEndImageContext();
     
     return filteredImage;
+}
+
+- (UIImage *)circular
+{
+    return [self circularWithBorderColor:nil andBorderWidth:0];
+}
+
+- (UIImage *)circularWithBorderColor:(UIColor *)color andBorderWidth:(CGFloat)width
+{
+    // Begin a new image that will be the new image with the rounded corners
+    // (here with the size of an UIImageView)
+    UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0);
+    
+    // Add a clip before drawing anything, in the shape of an rounded rect
+    CGRect rect = CGRectMake(0, 0, self.size.width, self.size.height);
+    UIBezierPath *bezierPath = [UIBezierPath bezierPathWithOvalInRect:rect];
+    [bezierPath addClip];
+    
+    // Draw your image
+    [self drawInRect:rect];
+    
+    if (color && width > 0) {
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        CGContextSetShouldAntialias(context, YES);
+
+        CGContextSetStrokeColorWithColor(context,color.CGColor);
+        
+        CGPathRef path = [bezierPath CGPath];
+        CGContextAddPath(context, path);
+        
+        CGContextSetLineWidth(context, width);
+        CGContextStrokeEllipseInRect(context, rect);
+    }
+    
+    // Get the image, here setting the UIImageView image
+    UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
+    
+    // Lets forget about that we were drawing
+    UIGraphicsEndImageContext();
+    
+    return result;
 }
 
 @end

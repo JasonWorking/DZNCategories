@@ -13,7 +13,13 @@
 #warning Incomplete Implementation
 - (BOOL)isToday
 {
-    return NO;
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    NSDateComponents *components = [cal components:(NSEraCalendarUnit | NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:[NSDate date]];
+    NSDate *today = [cal dateFromComponents:components];
+    components = [cal components:(NSEraCalendarUnit|NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:self];
+    NSDate *otherDate = [cal dateFromComponents:components];
+
+    return ([today compare:otherDate] == NSOrderedSame);
 }
 
 #warning Incomplete Implementation

@@ -27,10 +27,22 @@
 + (UIImage *)imageNamed:(NSString *)name andColored:(UIColor *)color;
 
 /*
+ */
+- (UIImage *)coloredImage:(UIColor *)color;
+
+/*
  * Transforms the image to grayscale.
  *
  * @returns The new grayscale image.
  */
 - (UIImage *)imageToGrayscale;
+
+/*
+ */
+- (UIImage *)circular;
+
+/*
+ */
+- (UIImage *)circularWithBorderColor:(UIColor *)color andBorderWidth:(CGFloat)width;
 
 @end
