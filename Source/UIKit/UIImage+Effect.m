@@ -10,33 +10,38 @@
 #import "UIImage+Effect.h"
 #import "UIColor+Hex.h"
 #import "NSObject+System.h"
+#import "CGGeometry+Size.h"
 #import <QuartzCore/QuartzCore.h>
 
 @implementation UIImage (Effect)
 
 - (UIImage *)imageWithMask:(UIImage *)maskImg
 {
+    CGSize size = self.size;
+    
+//    NSLog(@"self.size : %@", NSStringFromCGSize(self.size));
+    
     //// Draws the masked over the background colored image.
-    UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0);
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0.0);
 
 	CGColorSpaceRef colorSpace;
 	colorSpace = CGColorSpaceCreateDeviceRGB();
-	CGContextRef context = CGBitmapContextCreate(NULL, self.size.width, self.size.height, 8, 0, colorSpace, kCGImageAlphaPremultipliedLast);
+    
+	CGContextRef context = CGBitmapContextCreate(NULL, size.width, size.height, 8, 0, colorSpace, kCGImageAlphaPremultipliedLast);
     CGContextSetAllowsAntialiasing(context, true);
     CGContextSetShouldAntialias(context, true);
 	CGColorSpaceRelease(colorSpace);
 	
 	if (context == NULL) return nil;
-	
-	CGContextClipToMask(context, CGRectMake(0, 0, self.size.width, self.size.height), maskImg.CGImage);
-	CGContextDrawImage(context, CGRectMake(0, 0, self.size.width, self.size.height), self.CGImage);
+
+	CGContextClipToMask(context, CGRectMake(0, 0, size.width, size.height), maskImg.CGImage);
+	CGContextDrawImage(context, CGRectMake(0, 0, size.width, size.height), self.CGImage);
 	CGImageRef mainViewContentBitmapContext = CGBitmapContextCreateImage(context);
 	CGContextRelease(context);
-	UIImage *maskedImg = [UIImage imageWithCGImage:mainViewContentBitmapContext];
+	UIImage *maskedImg = [UIImage imageWithCGImage:mainViewContentBitmapContext scale:self.scale orientation:(self.imageOrientation)];
 	CGImageRelease(mainViewContentBitmapContext);
     
     UIGraphicsEndImageContext();
-    
 	return maskedImg;
 }
 
@@ -58,11 +63,20 @@
 
 + (UIImage *)imageNamed:(NSString *)name andColored:(UIColor *)color
 {
+    BOOL directory;
+    NSError *error = nil;
     CGFloat scale = [UIScreen mainScreen].scale;
     
     NSString *cacheDirectory = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *cachedImagesDirectory = [cacheDirectory stringByAppendingPathComponent:@"UICachedImages"];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:cachedImagesDirectory isDirectory:&directory]) {
+        [[NSFileManager defaultManager] createDirectoryAtPath:cachedImagesDirectory withIntermediateDirectories:NO attributes:nil error:&error];
+        if (error) NSLog(@"contentsOfDirectoryAtPath error : %@",error.localizedDescription);
+        NSLog(@"cachedImagesDirectory : %@",cachedImagesDirectory);
+    }
+    
     NSString *hex = [color hexFromColor];
-    NSString *path = [cacheDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@_%@",name,hex]];
+    NSString *path = [cachedImagesDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@_%@",name,hex]];
     if (scale == 2.0) path = [path stringByAppendingString:@"@2x"];
     
     path = [path stringByAppendingString:@".png"];
@@ -70,10 +84,34 @@
     if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
         UIImage *image = [[UIImage imageNamed:name] coloredImage:color];
         [UIImagePNGRepresentation(image) writeToFile:path atomically:YES];
+        return image;
     }
         
     NSData *data = [NSData dataWithContentsOfFile:path];
     return [UIImage imageWithData:data scale:scale];
+}
+
++ (void)clearCachedImages
+{
+    NSError *error = nil;
+    
+    NSString *cacheDirectory = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *cachedImagesDirectory = [cacheDirectory stringByAppendingPathComponent:@"UICachedImages"];
+    
+    NSArray *contents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:cachedImagesDirectory error:&error];
+    if (error) NSLog(@"contentsOfDirectoryAtPath error : %@",error.localizedDescription);
+    
+    for (NSString *filePath in contents) {
+        
+        NSString *path = [cachedImagesDirectory stringByAppendingPathComponent:filePath];
+
+        if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
+            
+            [[NSFileManager defaultManager] removeItemAtPath:path error:&error];
+            if (error) NSLog(@"removeItemAtPath error : %@",error.localizedDescription);
+            else NSLog(@"removed Item At Path : %@",path);
+        }
+    }
 }
 
 - (UIImage *)coloredImage:(UIColor *)color
@@ -108,15 +146,15 @@
 - (UIImage *)circularWithBorderColor:(UIColor *)color andBorderWidth:(CGFloat)width
 {
     // Begin a new image that will be the new image with the rounded corners
-    // (here with the size of an UIImageView)
     UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0);
     
     // Add a clip before drawing anything, in the shape of an rounded rect
     CGRect rect = CGRectMake(0, 0, self.size.width, self.size.height);
+
     UIBezierPath *bezierPath = [UIBezierPath bezierPathWithOvalInRect:rect];
     [bezierPath addClip];
     
-    // Draw your image
+    // Draw the image
     [self drawInRect:rect];
     
     if (color && width > 0) {
@@ -132,12 +170,8 @@
         CGContextStrokeEllipseInRect(context, rect);
     }
     
-    // Get the image, here setting the UIImageView image
     UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
-    
-    // Lets forget about that we were drawing
     UIGraphicsEndImageContext();
-    
     return result;
 }
 

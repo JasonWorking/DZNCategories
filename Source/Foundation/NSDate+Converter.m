@@ -9,6 +9,7 @@
 
 #import "NSDate+Converter.h"
 #import "NSArray+Query.h"
+#import "NSString+Time.h"
 
 @implementation NSDate (Converter)
 
@@ -61,6 +62,27 @@
     
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:[[NSCalendar currentCalendar] calendarIdentifier]];
     return [calendar dateFromComponents:comps];
+}
+
+- (NSString *)smartStringDate
+{
+    if ([self isToday]) return [NSString today];
+    if ([self isYesterday]) return  [NSString yesterday];
+    
+    NSString *localeIdentifier = [[NSLocale preferredLanguages] firstObject];
+    NSLocale *userLocale = [[NSLocale alloc] initWithLocaleIdentifier:localeIdentifier];
+
+    NSString *conjonction = nil;
+    if ([localeIdentifier isEqualToString:@"en"]) conjonction = @"of";
+    else if ([localeIdentifier isEqualToString:@"fr"]) conjonction = @"de";
+    else if ([localeIdentifier isEqualToString:@"es"]) conjonction = @"de";
+    else if ([localeIdentifier isEqualToString:@"de"]) conjonction = @"auf";
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setLocale:userLocale];
+    [dateFormatter setDateFormat:[NSString stringWithFormat:@"EEEE d '%@' MMMM", conjonction]];
+    
+    return [dateFormatter stringFromDate:self];
 }
 
 - (NSDate *)localTime

@@ -52,6 +52,11 @@ static NSString * const kNSDateFormatShortDay = @"EEE d";
 /*
  *
  */
+- (NSString *)smartStringDate;
+
+/*
+ *
+ */
 - (NSDate *)dateInDays:(NSUInteger)days;
 
 /*

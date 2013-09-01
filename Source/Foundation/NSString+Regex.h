@@ -22,13 +22,6 @@
 - (BOOL)isValidEmail;
 
 /*
- * Checks if the string is numeric.
- *
- * @returns YES if the string is numeric.
- */
-- (BOOL)isNumeric;
-
-/*
  * Checks if the string is a valid URL.
  *
  * @returns YES if the string is a valid URL.
@@ -36,8 +29,25 @@
 - (BOOL)isValidUrl;
 
 /*
+ * Checks if the string is numeric.
+ *
+ * @returns YES if the string is numeric.
+ */
+- (BOOL)isNumeric;
+
+/*
+ *
+ */
+- (BOOL)isValidFloat;
+
+/*
  *
  */
 - (BOOL)isBackSpace;
+
+/*
+ *
+ */
+- (BOOL)containsString:(NSString *)substring;
 
 @end

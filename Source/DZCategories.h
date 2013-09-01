@@ -13,6 +13,7 @@
 #import "NSString+Security.h"
 #import "NSString+Path.h"
 #import "NSString+Case.h"
+#import "NSString+Time.h"
 #import "NSUserDefaults+Custom.h"
 #import "NSDictionary+Safe.h"
 #import "NSMutableDictionary+Safe.h"
@@ -41,7 +42,12 @@
 #import "CGGeometry+Point.h"
 #import "CGGeometry+UIEdgeInsets.h"
 
-// CoreGraphics Location
+// CoreLocation Categories
 #import "CLLocation+Coordinate.h"
+
+// CoreData Categories
+#import "NSFetchedResultsController+Safe.h"
+#import "NSManagedObjectContext+Management.h"
+
 
 

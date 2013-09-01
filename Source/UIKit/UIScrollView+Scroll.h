@@ -16,4 +16,6 @@
 
 - (BOOL)isOnTop;
 
+- (BOOL)isOnBottom;
+
 @end

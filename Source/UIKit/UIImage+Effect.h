@@ -28,6 +28,10 @@
 
 /*
  */
++ (void)clearCachedImages;
+
+/*
+ */
 - (UIImage *)coloredImage:(UIColor *)color;
 
 /*

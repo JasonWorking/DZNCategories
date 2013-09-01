@@ -28,4 +28,9 @@
  */
 - (BOOL)isFirstDayOfMonth;
 
+/**
+ *
+ */
+- (BOOL)hasSameUnit:(unsigned)unitFlags thanDate:(NSDate *)date;
+
 @end

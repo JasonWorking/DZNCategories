@@ -48,5 +48,14 @@
     return ([firstDayOfMonthDate compare:otherDate] == NSOrderedSame);
 }
 
+- (BOOL)hasSameUnit:(unsigned)unitFlags thanDate:(NSDate *)date
+{
+    if (unitFlags == NSMinuteCalendarUnit) {
+        NSString *selfMinute = [self stringFromDateWithFormat:kNSDateFormatShortTime];
+        NSString *comparingMinute = [date stringFromDateWithFormat:kNSDateFormatShortTime];
+        if ([selfMinute isEqualToString:comparingMinute]) return YES;
+    }
+    return NO;
+}
 
 @end

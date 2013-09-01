@@ -9,8 +9,10 @@
 
 #import <CoreData/CoreData.h>
 
+/* */
 @interface NSFetchedResultsController (Safe)
 
+/* */
 - (id)safeObjectAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
