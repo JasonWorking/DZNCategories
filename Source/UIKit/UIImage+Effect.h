@@ -49,4 +49,8 @@
  */
 - (UIImage *)circularWithBorderColor:(UIColor *)color andBorderWidth:(CGFloat)width;
 
+/*
+ */
+- (UIImage *)circularWithOutterBorderColor:(UIColor *)color andBorderWidth:(CGFloat)width;
+
 @end

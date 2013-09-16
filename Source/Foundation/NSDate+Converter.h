@@ -9,6 +9,8 @@
 
 #import <Foundation/Foundation.h>
 
+static NSString * const kNSDateFormatStandard = @"yyyy-MM-dd'T'HH:mm:ssZZZZ";
+
 static NSString * const kNSDateFormatDateLarge = @"EEE MMM dd HH:mm:ss Z yyyy";
 static NSString * const kNSDateFormatDateFull = @"yyyy-MM-dd'T'HH:mm:ss";
 static NSString * const kNSDateFormatDate = @"yyyy-MM-dd";

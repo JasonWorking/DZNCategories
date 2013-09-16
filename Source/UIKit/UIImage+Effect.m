@@ -140,7 +140,30 @@
 
 - (UIImage *)circular
 {
-    return [self circularWithBorderColor:nil andBorderWidth:0];
+    // Begin a new image that will be the new image with the rounded corners
+    UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0);
+    
+    // Add a clip before drawing anything, in the shape of an rounded rect
+    CGRect rect = CGRectMake(0, 0, self.size.width, self.size.height);
+    
+    UIBezierPath *bezierPath = [UIBezierPath bezierPathWithOvalInRect:rect];
+    [bezierPath addClip];
+    
+    // Draw the image
+    [self drawInRect:rect];
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetShouldAntialias(context, YES);
+    
+    CGPathRef path = [bezierPath CGPath];
+    CGContextAddPath(context, path);
+    
+    CGContextSetLineWidth(context, 0);
+    CGContextStrokeEllipseInRect(context, rect);
+    
+    UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return result;
 }
 
 - (UIImage *)circularWithBorderColor:(UIColor *)color andBorderWidth:(CGFloat)width
@@ -172,6 +195,27 @@
     
     UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
+    return result;
+}
+
+- (UIImage *)circularWithOutterBorderColor:(UIColor *)color andBorderWidth:(CGFloat)width
+{
+    UIImage *circularImage = [self circular];
+    
+    CGSize canvasSize = CGSizeMake(self.size.width+width, self.size.height+width);
+    UIGraphicsBeginImageContextWithOptions(canvasSize, NO, 0.0);
+
+    CGSize size = CGSizeMake((self.size.width/2)+(width/2), (self.size.height/2)+(width/2));
+    UIImage *circularBorder = [[UIImage imageWithColor:color andSize:size] circular];
+
+    [circularBorder drawAtPoint:CGPointZero];
+    
+    CGPoint position = CGPointMake(width/2, width/2);
+    [circularImage drawAtPoint:position];
+
+    UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
     return result;
 }
 
