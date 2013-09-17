@@ -9,6 +9,7 @@
 
 // Foundation Categories
 #import "NSObject+System.h"
+#import "NSObject+KVC.h"
 #import "NSString+Regex.h"
 #import "NSString+Security.h"
 #import "NSString+Path.h"
