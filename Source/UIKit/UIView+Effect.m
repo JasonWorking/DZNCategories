@@ -52,6 +52,49 @@
     self.layer.borderColor = nil;
 }
 
+
+- (void)addShadow:(NSShadow *)shadow
+{
+    UIColor *color = [shadow.shadowColor colorWithAlphaComponent:1.0];
+    CGFloat opacity = CGColorGetAlpha([shadow.shadowColor CGColor]);
+    
+    [self addShadowWithColor:color offset:shadow.shadowOffset opacity:opacity andRadius:shadow.shadowBlurRadius];
+}
+
+- (void)addEmbossWithOffset:(CGSize)offset withOpacity:(CGFloat)opacity
+{
+    [self addShadowWithColor:[UIColor whiteColor] offset:offset opacity:opacity andRadius:0];
+}
+
+- (void)addGlowEffectWithColor:(UIColor *)color andOpacity:(CGFloat)opacity
+{
+    [self addShadowWithColor:color offset:CGSizeMake(0, 0) opacity:opacity andRadius:6.0];
+}
+
+- (void)addShadowWithOffset:(CGSize)offset opacity:(CGFloat)opacity andRadius:(CGFloat)radius
+{
+    [self addShadowWithColor:[UIColor blackColor] offset:offset opacity:opacity andRadius:radius];
+}
+
+- (void)addShadowWithColor:(UIColor *)color offset:(CGSize)offset opacity:(CGFloat)opacity andRadius:(CGFloat)radius
+{
+    self.layer.shadowColor = color.CGColor;
+    self.layer.shadowOpacity = opacity;
+    self.layer.shadowOffset = offset;
+    self.layer.shadowRadius = radius;
+    self.layer.masksToBounds = NO;
+    
+    [self rasterize];
+}
+
+
+
+- (void)addPathEmbossWithOffset:(CGSize)offset opacity:(CGFloat)opacity andRadius:(CGFloat)radius andFrame:(CGRect)frame
+{
+    [self addPathShadowWithOffset:offset opacity:opacity andRadius:radius andFrame:frame];
+    self.layer.shadowColor = [UIColor whiteColor].CGColor;
+}
+
 - (void)addPathShadowWithOffset:(CGSize)offset opacity:(CGFloat)opacity andRadius:(CGFloat)radius andFrame:(CGRect)frame
 {
     self.layer.shadowColor = [UIColor blackColor].CGColor;
@@ -62,47 +105,6 @@
     
     CGPathRef path = [[UIBezierPath bezierPathWithRoundedRect:frame cornerRadius:self.layer.cornerRadius] CGPath];
     self.layer.shadowPath = path;
-    
-    [self rasterize];
-}
-
-- (void)addPathEmbossWithOffset:(CGSize)offset opacity:(CGFloat)opacity andRadius:(CGFloat)radius andFrame:(CGRect)frame
-{
-    [self addPathShadowWithOffset:offset opacity:opacity andRadius:radius andFrame:frame];
-    self.layer.shadowColor = [UIColor whiteColor].CGColor;
-    
-    [self rasterize];
-}
-
-- (void)addShadowWithOffset:(CGSize)offset withOpacity:(CGFloat)opacity andRadius:(CGFloat)radius
-{
-    self.layer.shadowColor = [UIColor blackColor].CGColor;
-    self.layer.shadowOpacity = opacity;
-    self.layer.shadowOffset = offset;
-    self.layer.shadowRadius = radius;
-    self.layer.masksToBounds = NO;
-    
-    [self rasterize];
-}
-
-- (void)addEmbossWithOffset:(CGSize)offset withOpacity:(CGFloat)opacity
-{
-    self.layer.shadowColor = [UIColor whiteColor].CGColor;
-    self.layer.shadowOpacity = opacity;
-    self.layer.shadowOffset = offset;
-    self.layer.shadowRadius = 0;
-    self.layer.masksToBounds = NO;
-    
-    [self rasterize];
-}
-
-- (void)addGlowEffectWithColor:(UIColor *)color andOpacity:(CGFloat)opacity
-{
-    self.layer.shadowColor = color.CGColor;
-    self.layer.shadowOpacity = opacity;
-    self.layer.shadowOffset = CGSizeMake(0, 0);
-    self.layer.shadowRadius = 6.0;
-    self.layer.masksToBounds = NO;
     
     [self rasterize];
 }

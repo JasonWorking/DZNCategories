@@ -10,9 +10,14 @@
 #import <CoreGraphics/CoreGraphics.h>
 
 /*
- * Returns a rectangle with none null width and height based on he provided CGSize, and empty origin.
+ * Returns a rectangle with none null width and height based on the provided CGSize, and empty origin.
  */
 CGRect CGRectWithSize(CGSize size);
+
+/*
+ * Returns a rectangle with based on the provided CGPoint & CGSize.
+ */
+CGRect CGRectRemake(CGPoint point, CGSize size);
 
 /*
  * Returns a rectangle with none null width and height, and empty origin.

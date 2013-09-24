@@ -44,6 +44,30 @@
  */
 - (void)removeBorders;
 
+
+/*
+ * Adds a shadow based on the attributes of an NSShadow object.
+ *
+ * @param shadow The object that encapsulates the shadow attributes.
+ */
+- (void)addShadow:(NSShadow *)shadow;
+
+/*
+ * Adds a white emboss for any object that Inherits from UIView.
+ *
+ * @param offset The orientation offset of the shadow.
+ * @param opacity The opacity of the shadow.
+ */
+- (void)addEmbossWithOffset:(CGSize)offset withOpacity:(CGFloat)opacity;
+
+/*
+ * Adds a glow effect for any object that Inherits from UIView.
+ *
+ * @param color The color of the glow.
+ * @param opacity The opacity of the glow.
+ */
+- (void)addGlowEffectWithColor:(UIColor *)color andOpacity:(CGFloat)opacity;
+
 /*
  * Adds a shadow for any object that Inherits from UIView.
  *
@@ -51,7 +75,7 @@
  * @param opacity The opacity of the shadow.
  * @param radius The blur radius of the shadow.
  */
-- (void)addShadowWithOffset:(CGSize)offset withOpacity:(CGFloat)opacity andRadius:(CGFloat)radius;
+- (void)addShadowWithOffset:(CGSize)offset opacity:(CGFloat)opacity andRadius:(CGFloat)radius;
 
 /*
  * Adds a very performant drop shadow for any object that Inherits from UIView.
@@ -73,21 +97,7 @@
  */
 - (void)addPathEmbossWithOffset:(CGSize)offset opacity:(CGFloat)opacity andRadius:(CGFloat)radius andFrame:(CGRect)frame;
 
-/*
- * Adds a white emboss for any object that Inherits from UIView.
- *
- * @param offset The orientation offset of the shadow.
- * @param opacity The opacity of the shadow.
- */
-- (void)addEmbossWithOffset:(CGSize)offset withOpacity:(CGFloat)opacity;
 
-/*
- * Adds a glow effect for any object that Inherits from UIView.
- *
- * @param color The color of the glow.
- * @param opacity The opacity of the glow.
- */
-- (void)addGlowEffectWithColor:(UIColor *)color andOpacity:(CGFloat)opacity;
 
 /*
  * Removes the shadow/glow effect for any object that Inherits from UIView.
