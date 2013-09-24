@@ -36,6 +36,7 @@
 #import "UIImage+Resize.h"
 #import "UIImage+Effect.h"
 #import "UIScrollView+Scroll.h"
+#import "UIFont+System.h"
 
 // CoreGraphics Categories
 #import "CGGeometry+Rect.h"
