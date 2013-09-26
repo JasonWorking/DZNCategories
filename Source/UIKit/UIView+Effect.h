@@ -58,7 +58,7 @@
  * @param offset The orientation offset of the shadow.
  * @param opacity The opacity of the shadow.
  */
-- (void)addEmbossWithOffset:(CGSize)offset withOpacity:(CGFloat)opacity;
+- (void)addEmbossWithOffset:(CGSize)offset opacity:(CGFloat)opacity;
 
 /*
  * Adds a glow effect for any object that Inherits from UIView.
@@ -66,7 +66,7 @@
  * @param color The color of the glow.
  * @param opacity The opacity of the glow.
  */
-- (void)addGlowEffectWithColor:(UIColor *)color andOpacity:(CGFloat)opacity;
+- (void)addGlowEffectWithColor:(UIColor *)color opacity:(CGFloat)opacity;
 
 /*
  * Adds a shadow for any object that Inherits from UIView.

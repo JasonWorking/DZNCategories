@@ -61,12 +61,12 @@
     [self addShadowWithColor:color offset:shadow.shadowOffset opacity:opacity andRadius:shadow.shadowBlurRadius];
 }
 
-- (void)addEmbossWithOffset:(CGSize)offset withOpacity:(CGFloat)opacity
+- (void)addEmbossWithOffset:(CGSize)offset opacity:(CGFloat)opacity
 {
     [self addShadowWithColor:[UIColor whiteColor] offset:offset opacity:opacity andRadius:0];
 }
 
-- (void)addGlowEffectWithColor:(UIColor *)color andOpacity:(CGFloat)opacity
+- (void)addGlowEffectWithColor:(UIColor *)color opacity:(CGFloat)opacity
 {
     [self addShadowWithColor:color offset:CGSizeMake(0, 0) opacity:opacity andRadius:6.0];
 }
