@@ -12,6 +12,7 @@
 #import "NSObject+System.h"
 #import "CGGeometry+Size.h"
 #import <QuartzCore/QuartzCore.h>
+#import <CoreImage/CoreImage.h>
 
 @implementation UIImage (Effect)
 

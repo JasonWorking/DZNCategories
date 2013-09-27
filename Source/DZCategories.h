@@ -35,6 +35,7 @@
 #import "UIImage+Alpha.h"
 #import "UIImage+Resize.h"
 #import "UIImage+Effect.h"
+#import "UIImage+Filter.h"
 #import "UIScrollView+Scroll.h"
 #import "UIFont+System.h"
 

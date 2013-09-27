@@ -53,4 +53,8 @@
  */
 - (UIImage *)circularWithOutterBorderColor:(UIColor *)color andBorderWidth:(CGFloat)width;
 
+/*
+ */
+- (UIImage *)blurImage;
+
 @end
