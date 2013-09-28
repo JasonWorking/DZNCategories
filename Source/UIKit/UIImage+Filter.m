@@ -26,8 +26,8 @@
     [filter setValue:inputImage forKey:kCIInputImageKey];
     
     if ([filterName isEqualToString:kCIGaussianBlur]) {
-        NSNumber *radius = [attributes objectForKey:kCIInputRadiusKey];
-        [filter setValue:radius forKey:kCIInputRadiusKey];
+        NSNumber *radius = [attributes objectForKey:@""];
+        [filter setValue:radius forKey:@"inputRadius"];
         
         CIImage *result = [filter valueForKey:kCIOutputImageKey];
         //CIGaussianBlur has a tendency to shrink the image a little, this ensures it matches up exactly to the bounds of our original image
@@ -45,7 +45,9 @@
     }
     
     //return the newly blurred image
-    return [UIImage imageWithCGImage:cgImage];
+    UIImage *filteredImage = [UIImage imageWithCGImage:cgImage];
+    CGImageRelease(cgImage);
+    return filteredImage;
 }
 
 - (UIImage *)filterGlaussianBlurWithRadius:(CGFloat)radius
@@ -55,7 +57,7 @@
 
 - (UIImage *)filterGlaussianBlurWithRadius:(CGFloat)radius andBlurredEdges:(BOOL)edges
 {
-    return [self applyFilter:kCIGaussianBlur withAttributes:@{kCIInputRadiusKey: [NSNumber numberWithFloat:radius], kCIInputBOOLKey: [NSNumber numberWithBool:edges]}];
+    return [self applyFilter:kCIGaussianBlur withAttributes:@{@"inputRadiuss": [NSNumber numberWithFloat:radius], kCIInputBOOLKey: [NSNumber numberWithBool:edges]}];
 }
 
 @end
