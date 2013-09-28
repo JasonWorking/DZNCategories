@@ -57,7 +57,7 @@
 
 - (UIImage *)filterGlaussianBlurWithRadius:(CGFloat)radius andBlurredEdges:(BOOL)edges
 {
-    return [self applyFilter:kCIGaussianBlur withAttributes:@{@"inputRadiuss": [NSNumber numberWithFloat:radius], kCIInputBOOLKey: [NSNumber numberWithBool:edges]}];
+    return [self applyFilter:kCIGaussianBlur withAttributes:@{@"inputRadius": [NSNumber numberWithFloat:radius], kCIInputBOOLKey: [NSNumber numberWithBool:edges]}];
 }
 
 @end
