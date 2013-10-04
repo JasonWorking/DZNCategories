@@ -52,7 +52,6 @@
     return [predicate evaluateWithObject:self];
 }
 
-#warning Incomplete Implementation (can do better than this)
 - (BOOL)isBackSpace
 {
     return ([self isEqualToString:@""] && self.length == 1) ? YES : NO;

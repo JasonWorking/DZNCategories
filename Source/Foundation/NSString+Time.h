@@ -8,14 +8,24 @@
 
 #import <Foundation/Foundation.h>
 
+/*
+ */
 @interface NSString (Time)
 
+/*
+ */
 + (NSString *)elapsedTime:(NSTimeInterval)time;
 
+/*
+ */
 + (NSString *)yesterday;
 
+/*
+ */
 + (NSString *)today;
 
+/*
+ */
 + (NSString *)tomorrow;
 
 @end

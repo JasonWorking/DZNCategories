@@ -9,7 +9,6 @@
 #import "UIImage+Filter.h"
 
 #define kCIGaussianBlur @"CIGaussianBlur"
-
 #define kCIInputBOOLKey @"kCIInputBOOLKey"
 
 @implementation UIImage (Filter)
@@ -26,7 +25,7 @@
     [filter setValue:inputImage forKey:kCIInputImageKey];
     
     if ([filterName isEqualToString:kCIGaussianBlur]) {
-        NSNumber *radius = [attributes objectForKey:@""];
+        NSNumber *radius = [attributes objectForKey:@"inputRadius"];
         [filter setValue:radius forKey:@"inputRadius"];
         
         CIImage *result = [filter valueForKey:kCIOutputImageKey];

@@ -280,17 +280,18 @@
 
 - (UIImage *)circularWithOutterBorderColor:(UIColor *)color andBorderWidth:(CGFloat)width
 {
+    CGFloat scale = [UIScreen mainScreen].scale;
     UIImage *circularImage = [self circular];
-    
+
     CGSize canvasSize = CGSizeMake(self.size.width+width, self.size.height+width);
     UIGraphicsBeginImageContextWithOptions(canvasSize, NO, 0.0);
 
-    CGSize size = CGSizeMake((self.size.width/2)+(width/2), (self.size.height/2)+(width/2));
+    CGSize size = CGSizeMake(roundf((self.size.width/scale)+(width/scale)), roundf((self.size.height/scale)+(width/scale)));
     UIImage *circularBorder = [[UIImage imageWithColor:color andSize:size] circular];
 
     [circularBorder drawAtPoint:CGPointZero];
     
-    CGPoint position = CGPointMake(width/2, width/2);
+    CGPoint position = CGPointMake(roundf(width/2), roundf(width/2));
     [circularImage drawAtPoint:position];
 
     UIImage *result = UIGraphicsGetImageFromCurrentImageContext();

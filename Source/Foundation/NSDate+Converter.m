@@ -8,6 +8,7 @@
 //
 
 #import "NSDate+Converter.h"
+#import "NSDate+Comparison.h"
 #import "NSArray+Query.h"
 #import "NSString+Time.h"
 
