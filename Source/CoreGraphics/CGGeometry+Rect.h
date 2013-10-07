@@ -17,7 +17,7 @@ CGRect CGRectWithSize(CGSize size);
 /*
  * Returns a rectangle with based on the provided CGPoint & CGSize.
  */
-CGRect CGRectRemake(CGPoint point, CGSize size);
+CGRect CGRectCreate(CGPoint point, CGSize size);
 
 /*
  * Returns a rectangle with none null width and height, and empty origin.

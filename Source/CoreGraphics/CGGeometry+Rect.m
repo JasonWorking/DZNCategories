@@ -14,7 +14,7 @@ CGRect CGRectWithSize(CGSize size)
 	return CGRectMake(0, 0, size.width, size.height);
 }
 
-CGRect CGRectRemake(CGPoint point, CGSize size)
+CGRect CGRectCreate(CGPoint point, CGSize size)
 {
     return CGRectMake(point.x, point.y, size.width, size.height);
 }
