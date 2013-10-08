@@ -38,6 +38,16 @@ bool CLLocationCoordinateIsEmpty(CLLocationCoordinate2D coord);
 /*
  *
  */
+bool CLLocationCoordinate2DAreEqual(CLLocationCoordinate2D coord1, CLLocationCoordinate2D coord2);
+
+/*
+ *
+ */
+bool CLLocationCoordinate2DAreEqual(CLLocationCoordinate2D coord1, CLLocationCoordinate2D coord2);
+
+/*
+ *
+ */
 NSString *NSStringFromCLLocationCoordinate(CLLocationCoordinate2D coord);
 
 /*

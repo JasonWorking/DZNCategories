@@ -13,7 +13,17 @@
 
 bool CLLocationCoordinateIsEmpty(CLLocationCoordinate2D coord)
 {
-    return (coord.latitude == 0 && coord.longitude == 0) ? true : false;
+    return CLLocationCoordinate2DAreEqual(coord, CLLocationCoordinate2DZero()) ? true : false;
+}
+
+bool CLLocationCoordinate2DAreEqual(CLLocationCoordinate2D coord1, CLLocationCoordinate2D coord2)
+{
+    return (coord1.latitude == coord2.latitude && coord1.longitude == coord2.longitude) ? true : false;
+}
+
+CLLocationCoordinate2D CLLocationCoordinate2DZero()
+{
+    return CLLocationCoordinate2DMake(0, 0);
 }
 
 NSString *NSStringFromCLLocationCoordinate(CLLocationCoordinate2D coord)

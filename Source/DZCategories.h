@@ -52,5 +52,10 @@
 #import "NSFetchedResultsController+Safe.h"
 #import "NSManagedObjectContext+Management.h"
 
+// MapKit Categories
+#import "MKMapView+Center.h"
+#import "MKMapView+Region.h"
+#import "MKGeometry+Rect.h"
+
 
 
