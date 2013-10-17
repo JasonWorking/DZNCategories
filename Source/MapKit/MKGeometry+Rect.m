@@ -1,9 +1,10 @@
 //
 //  MKGeometry+Rect.m
-//  EpicList
 //
-//  Created by Ignacio on 10/7/13.
-//  Copyright (c) 2013 Epic Peaks GmbH. All rights reserved.
+//  Created by Ignacio Romero Zurbuchen on 4/18/13.
+//  Copyright (c) 2011 DZen Interaktiv.
+//  Licence: MIT-Licence
+//  http://opensource.org/licenses/MIT
 //
 
 #import "MKGeometry+Rect.h"

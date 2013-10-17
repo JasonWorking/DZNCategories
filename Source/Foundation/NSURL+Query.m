@@ -8,6 +8,7 @@
 //
 
 #import "NSURL+Query.h"
+#import "NSArray+Query.h"
 
 @implementation NSURL (Query)
 
@@ -16,16 +17,30 @@
     return ([self scheme]) ? YES : NO;
 }
 
+- (NSString *)noun
+{
+    for (NSString *pair in [self pairs]) {
+        NSArray *elements = [pair componentsSeparatedByString:@"/"];
+        if (elements.count > 1) {
+            return [elements objectAtIndex:0];
+        }
+    }
+    return nil;
+}
+
 - (NSString *)verb
 {
-    NSArray *pairs = [[self absoluteString] componentsSeparatedByString:@"?"];
-    
-    for (NSString *pair in pairs) {
+    for (NSString *pair in [self pairs]) {
         NSArray *elements = [pair componentsSeparatedByString:@"/"];
         return [elements lastObject];
     }
-    
     return nil;
+}
+
+- (NSArray *)pairs
+{
+    NSString *body = [[self absoluteString] stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%@://",[self scheme]] withString:@""];
+    return [body componentsSeparatedByString:@"?"];
 }
 
 - (NSDictionary *)parametersString

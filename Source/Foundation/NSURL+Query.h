@@ -24,6 +24,12 @@
  *
  * @returns
  */
+- (NSString *)noun;
+
+/* Returns
+ *
+ * @returns
+ */
 - (NSString *)verb;
 
 /* Returns
