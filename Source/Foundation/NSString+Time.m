@@ -7,6 +7,7 @@
 //
 
 #import "NSString+Time.h"
+#import "NSArray+Query.h"
 
 @implementation NSString (Time)
 
