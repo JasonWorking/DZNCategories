@@ -56,6 +56,7 @@
 #import "MKMapView+Center.h"
 #import "MKMapView+Region.h"
 #import "MKGeometry+Rect.h"
-
+#import "MKMapView+Span.h"
+#import "MKMapSnapshotter+Cache.h"
 
 
