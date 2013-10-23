@@ -12,6 +12,6 @@ typedef void (^MKMapSnapshotCachedCompletionHandler)(UIImage *snapshot, NSError 
 
 @interface MKMapSnapshotter (Cache)
 
-- (void)cacheWithCompletionHandler:(MKMapSnapshotCachedCompletionHandler)completionHandler andOptions:(MKMapSnapshotOptions *)options;
+- (void)startCacheWithCompletionHandler:(MKMapSnapshotCachedCompletionHandler)completionHandler andOptions:(MKMapSnapshotOptions *)options;
 
 @end

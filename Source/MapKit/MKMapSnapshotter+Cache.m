@@ -10,10 +10,10 @@
 
 @implementation MKMapSnapshotter (Cache)
 
-- (void)cacheWithCompletionHandler:(MKMapSnapshotCachedCompletionHandler)completionHandler andOptions:(MKMapSnapshotOptions *)options;
+- (void)startCacheWithCompletionHandler:(MKMapSnapshotCachedCompletionHandler)completionHandler andOptions:(MKMapSnapshotOptions *)options
 {
-    if (CLLocationCoordinate2DIsValid(options.region.center)) {
-        
+    if (CLLocationCoordinate2DIsValid(options.region.center))
+    {
         NSString *center = NSStringFromCLLocationCoordinate(options.region.center);
         NSString *span = NSStringFromMKCoordinateSpan(options.region.span);
         NSString *size = NSStringFromCGSize(options.size);
@@ -24,7 +24,7 @@
         NSError *error = nil;
         
         NSString *cacheDirectory = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-        NSString *cachedImagesDirectory = [cacheDirectory stringByAppendingPathComponent:@"MKCachedImages"];
+        NSString *cachedImagesDirectory = [cacheDirectory stringByAppendingPathComponent:@"com.dzn.MKMapSnapshot.default"];
         if (![[NSFileManager defaultManager] fileExistsAtPath:cachedImagesDirectory isDirectory:&directory]) {
             [[NSFileManager defaultManager] createDirectoryAtPath:cachedImagesDirectory withIntermediateDirectories:NO attributes:nil error:&error];
             if (error) NSLog(@"contentsOfDirectoryAtPath error : %@",error.localizedDescription);

@@ -72,7 +72,7 @@
     CGFloat scale = [UIScreen mainScreen].scale;
     
     NSString *cacheDirectory = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *cachedImagesDirectory = [cacheDirectory stringByAppendingPathComponent:@"UICachedImages"];
+    NSString *cachedImagesDirectory = [cacheDirectory stringByAppendingPathComponent:@"com.dzn.UIImageCache.default"];
     if (![[NSFileManager defaultManager] fileExistsAtPath:cachedImagesDirectory isDirectory:&directory]) {
         [[NSFileManager defaultManager] createDirectoryAtPath:cachedImagesDirectory withIntermediateDirectories:NO attributes:nil error:&error];
         if (error) NSLog(@"contentsOfDirectoryAtPath error : %@",error.localizedDescription);
