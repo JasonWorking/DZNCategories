@@ -14,6 +14,8 @@
 #import <QuartzCore/QuartzCore.h>
 #import <CoreImage/CoreImage.h>
 
+static NSString *cacheFolderName = @"com.dzn.UIImageCache.default";
+
 @implementation UIImage (Effect)
 
 - (UIImage *)imageWithMask:(UIImage *)maskImg
@@ -72,7 +74,7 @@
     CGFloat scale = [UIScreen mainScreen].scale;
     
     NSString *cacheDirectory = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *cachedImagesDirectory = [cacheDirectory stringByAppendingPathComponent:@"com.dzn.UIImageCache.default"];
+    NSString *cachedImagesDirectory = [cacheDirectory stringByAppendingPathComponent:cacheFolderName];
     if (![[NSFileManager defaultManager] fileExistsAtPath:cachedImagesDirectory isDirectory:&directory]) {
         [[NSFileManager defaultManager] createDirectoryAtPath:cachedImagesDirectory withIntermediateDirectories:NO attributes:nil error:&error];
         if (error) NSLog(@"contentsOfDirectoryAtPath error : %@",error.localizedDescription);
@@ -100,7 +102,7 @@
     NSError *error = nil;
     
     NSString *cacheDirectory = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *cachedImagesDirectory = [cacheDirectory stringByAppendingPathComponent:@"UICachedImages"];
+    NSString *cachedImagesDirectory = [cacheDirectory stringByAppendingPathComponent:cacheFolderName];
     
     NSArray *contents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:cachedImagesDirectory error:&error];
     if (error) NSLog(@"contentsOfDirectoryAtPath error : %@",error.localizedDescription);
