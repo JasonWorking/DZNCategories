@@ -1,12 +1,14 @@
 //
-//  MKMapSnapshotter+Cache.m
-//  EpicList
+//  MKMapSnapshotter+Cache.h
 //
-//  Created by Ignacio on 10/22/13.
-//  Copyright (c) 2013 Epic Peaks GmbH. All rights reserved.
+//  Created by Ignacio Romero Zurbuchen on 11/05/13.
+//  Copyright (c) 2011 DZen Interaktiv.
+//  Licence: MIT-Licence
+//  http://opensource.org/licenses/MIT
 //
 
 #import "MKMapSnapshotter+Cache.h"
+#import "CLLocation+Coordinate.h"
 
 static NSString *cacheFolderName = @"com.dzn.MKMapSnapshot.default";
 
@@ -21,8 +23,6 @@ static NSString *cacheFolderName = @"com.dzn.MKMapSnapshot.default";
         NSString *size = NSStringFromCGSize(options.size);
         MKMapType mapType = options.mapType;
         CGFloat scale = options.scale;
-        
-        
         
         BOOL directory;
         NSError *error = nil;

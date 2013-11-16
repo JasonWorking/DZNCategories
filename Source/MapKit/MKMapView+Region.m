@@ -48,21 +48,8 @@
     return region;
 }
 
-- (MKCoordinateRegion)region
-{
-    MKCoordinateSpan span;
-    span.latitudeDelta = 0.02;
-    span.longitudeDelta = 0.02;
-    
-    MKCoordinateRegion region;
-    region.span = span;
-    
-    return region;
-}
-
 - (BOOL)isValidRegion:(MKCoordinateRegion)region
 {
-    NSLog(@"%s",__FUNCTION__);
     if (region.center.latitude > 90.0f || region.center.latitude < -90.0f ||
         region.center.longitude > 360.0f || region.center.longitude < -180.0f) {
         

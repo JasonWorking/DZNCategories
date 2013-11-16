@@ -34,3 +34,13 @@ MKMapRect mapRectForCoordinateRegion(MKCoordinateRegion coordinate)
     
     return mapRect;
 }
+
+NSString *NSStringFromMKCoordinateRegion(MKCoordinateRegion region)
+{
+    return [NSString stringWithFormat:@"center :%f,%f  span :%f,%f",region.center.latitude, region.center.longitude, region.span.latitudeDelta, region.span.longitudeDelta];
+}
+
+NSString *NSStringFromMKCoordinateSpan(MKCoordinateSpan span)
+{
+    return [NSString stringWithFormat:@"%f,%f",span.latitudeDelta,span.longitudeDelta];
+}

@@ -18,3 +18,13 @@ NSString *NSStringFromMKMapRect(MKMapRect rect);
  *
  */
 MKMapRect mapRectForCoordinateRegion(MKCoordinateRegion coordinate);
+
+/*
+ *
+ */
+NSString *NSStringFromMKCoordinateRegion(MKCoordinateRegion region);
+
+/*
+ *
+ */
+NSString *NSStringFromMKCoordinateSpan(MKCoordinateSpan span);

@@ -37,6 +37,7 @@
 #import "UIImage+Effect.h"
 #import "UIImage+Filter.h"
 #import "UIScrollView+Scroll.h"
+#import "UITextField+Appearance.h"
 #import "UIFont+System.h"
 
 // CoreGraphics Categories
@@ -56,7 +57,7 @@
 #import "MKMapView+Center.h"
 #import "MKMapView+Region.h"
 #import "MKGeometry+Rect.h"
-#import "MKMapView+Span.h"
+#import "MKMapView+Zoom.h"
 #import "MKMapSnapshotter+Cache.h"
 
 

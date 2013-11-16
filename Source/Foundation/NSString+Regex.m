@@ -29,6 +29,7 @@
 - (BOOL)isValidUrl
 {
     NSString *regex = @"(http|https):\\/\\/[\\w\\-_]+(\\.[\\w\\-_]+)+([\\w\\-\\.,@?^=%&amp;:/~\\+#]*[\\w\\-\\@?^=%&amp;/~\\+#])?";
+//    NSString *regex = @"(http|https)://((\\w)*|([0-9]*)|([-|_])*)+([\\.|/]((\\w)*|([0-9]*)|([-|_])*))+";
     return ([self rangeOfString:regex options:NSRegularExpressionSearch].location != NSNotFound);
 }
 

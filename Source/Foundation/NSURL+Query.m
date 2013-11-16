@@ -9,6 +9,7 @@
 
 #import "NSURL+Query.h"
 #import "NSArray+Query.h"
+#import "NSArray+Safe.h"
 
 @implementation NSURL (Query)
 
@@ -21,9 +22,7 @@
 {
     for (NSString *pair in [self pairs]) {
         NSArray *elements = [pair componentsSeparatedByString:@"/"];
-        if (elements.count > 1) {
-            return [elements objectAtIndex:0];
-        }
+        return [elements safeObjectAtIndex:0];
     }
     return nil;
 }
@@ -32,7 +31,7 @@
 {
     for (NSString *pair in [self pairs]) {
         NSArray *elements = [pair componentsSeparatedByString:@"/"];
-        return [elements lastObject];
+        return [elements safeObjectAtIndex:1];
     }
     return nil;
 }
@@ -50,8 +49,8 @@
     
     for (NSString *pair in pairs) {
         NSArray *elements = [pair componentsSeparatedByString:@"="];
-        NSString *key = [[elements objectAtIndex:0] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        NSString *val = [[elements objectAtIndex:1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSString *key = [[elements safeObjectAtIndex:0] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSString *val = [[elements safeObjectAtIndex:1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         
         [dict setObject:val forKey:key];
     }
