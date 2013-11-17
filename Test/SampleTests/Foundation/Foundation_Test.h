@@ -11,5 +11,6 @@
 @interface Foundation_Test : SenTestCase
 
 + (void)testNSDateComparison;
++ (void)testNSStringDrawing;
 
 @end

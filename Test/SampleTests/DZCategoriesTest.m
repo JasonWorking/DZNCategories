@@ -19,6 +19,7 @@
 + (void)testFoundation
 {
     [Foundation_Test testNSDateComparison];
+    [Foundation_Test testNSStringDrawing];
 }
 
 + (void)testCoreLocation

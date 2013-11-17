@@ -8,6 +8,7 @@
 //
 
 #import "MKMapSnapshotter+Cache.h"
+#import "MKGeometry+Rect.h"
 #import "CLLocation+Coordinate.h"
 
 static NSString *cacheFolderName = @"com.dzn.MKMapSnapshot.default";

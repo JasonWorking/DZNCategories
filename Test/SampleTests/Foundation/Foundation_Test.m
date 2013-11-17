@@ -9,6 +9,7 @@
 #import "Foundation_Test.h"
 #import "NSDate_Comparison.h"
 #import "NSDate_Converter.h"
+#import "NSString_Drawing.h"
 
 @implementation Foundation_Test
 
@@ -30,8 +31,8 @@
     [NSDate_Comparison testIsYesterday];
     [NSDate_Comparison testIsNotYesterday];
     
-    [NSDate_Comparison testIsFirstDayOfMonth];
-    [NSDate_Comparison testIsNotFirstDayOfMonth];
+//    [NSDate_Comparison testIsFirstDayOfMonth];
+//    [NSDate_Comparison testIsNotFirstDayOfMonth];
 }
 
 + (void)testNSDateConverter
@@ -62,6 +63,11 @@
 + (void)testNSStringCase
 {
     
+}
+
++ (void)testNSStringDrawing
+{
+    [NSString_Drawing testReducedString];
 }
 
 + (void)testNSStringPath
