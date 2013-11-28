@@ -10,24 +10,24 @@
 
 @implementation NSString (Drawing)
 
-- (CGFloat)lineHeightWithFont:(UIFont *)font
+- (NSInteger)numberOfLinesWithinSize:(CGSize)size withFont:(UIFont *)font
 {
-    CGRect boundingRect = [self boundingRectWithSize:CGSizeMake(0, FLT_MAX) options:(NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading) attributes:@{NSFontAttributeName: font} context:nil];
-    return roundf(boundingRect.size.height);
+    return (NSInteger)size.height/font.lineHeight;
 }
 
-- (NSInteger)numberOfLinesOnSize:(CGSize)size withFont:(UIFont *)font
+- (NSInteger)numberOfLineBreaks
 {
-    CGFloat lineHeight = [self lineHeightWithFont:font];
-    return (NSInteger)size.height/lineHeight;
+    NSInteger numberOfBreaks = [self componentsSeparatedByString:@"\n"].count;
+    if (numberOfBreaks > 1) return numberOfBreaks-1;
+    else return 0;
 }
 
-- (NSUInteger)visibleStringLengthFromSize:(CGSize)size withFont:(UIFont *)font andParagraphStyle:(NSParagraphStyle *)style
+- (NSUInteger)visibleStringLengthWithinSize:(CGSize)size withFont:(UIFont *)font andParagraphStyle:(NSParagraphStyle *)style
 {
-    return [self visibleStringFromSize:size withFont:font andParagraphStyle:style].length;
+    return [self visibleStringWithinSize:size withFont:font andParagraphStyle:style].length;
 }
 
-- (NSString *)visibleStringFromSize:(CGSize)size withFont:(UIFont *)font andParagraphStyle:(NSParagraphStyle *)style
+- (NSString *)visibleStringWithinSize:(CGSize)size withFont:(UIFont *)font andParagraphStyle:(NSParagraphStyle *)style
 {
     CGSize sizeConstraint = CGSizeMake(size.width, CGFLOAT_MAX);
 

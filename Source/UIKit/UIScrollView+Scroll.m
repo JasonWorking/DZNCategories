@@ -19,9 +19,6 @@
 - (void)scrollToBottomAnimated:(BOOL)animated
 {
     if ([self canScrollToBottom]) {
-        
-        NSLog(@"%s",__FUNCTION__);
-        
         CGPoint bottomOffset = CGPointMake(0, self.contentSize.height - self.bounds.size.height);
         [self setContentOffset:bottomOffset animated:animated];
     }

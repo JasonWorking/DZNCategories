@@ -11,12 +11,12 @@
 
 @interface NSString (Drawing)
 
-- (CGFloat)lineHeightWithFont:(UIFont *)font;
+- (NSInteger)numberOfLinesWithinSize:(CGSize)size withFont:(UIFont *)font;
 
-- (NSInteger)numberOfLinesOnSize:(CGSize)size withFont:(UIFont *)font;
+- (NSInteger)numberOfLineBreaks;
 
-- (NSUInteger)visibleStringLengthFromSize:(CGSize)size withFont:(UIFont *)font andParagraphStyle:(NSParagraphStyle *)style;
+- (NSUInteger)visibleStringLengthWithinSize:(CGSize)size withFont:(UIFont *)font andParagraphStyle:(NSParagraphStyle *)style;
 
-- (NSString *)visibleStringFromSize:(CGSize)size withFont:(UIFont *)font andParagraphStyle:(NSParagraphStyle *)style;
+- (NSString *)visibleStringWithinSize:(CGSize)size withFont:(UIFont *)font andParagraphStyle:(NSParagraphStyle *)style;
 
 @end

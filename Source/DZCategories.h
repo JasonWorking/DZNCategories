@@ -38,6 +38,7 @@
 #import "UIImage+Effect.h"
 #import "UIImage+Filter.h"
 #import "UIScrollView+Scroll.h"
+#import "UITableView+Scroll.h"
 #import "UITextField+Appearance.h"
 #import "UIFont+System.h"
 
