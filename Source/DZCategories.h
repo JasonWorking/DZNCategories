@@ -40,6 +40,7 @@
 #import "UIScrollView+Scroll.h"
 #import "UITableView+Scroll.h"
 #import "UITextField+Appearance.h"
+#import "UITextField+Behaviour.h"
 #import "UIFont+System.h"
 
 // CoreGraphics Categories
