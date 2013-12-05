@@ -16,6 +16,7 @@
 #import "NSString+Case.h"
 #import "NSString+Time.h"
 #import "NSString+Drawing.h"
+#import "NSString+Safe.h"
 #import "NSUserDefaults+Custom.h"
 #import "NSDictionary+Safe.h"
 #import "NSMutableDictionary+Safe.h"

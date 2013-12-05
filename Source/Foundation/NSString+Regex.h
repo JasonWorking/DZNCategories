@@ -50,4 +50,10 @@
  */
 - (BOOL)containsString:(NSString *)substring;
 
+/*
+ * Returns an array of strings contained between 2 strings.
+ * Based Si's answer on StackOverflow http://stackoverflow.com/a/9227750/590010
+ */
+- (NSMutableArray *)stringsBetweenString:(NSString *)start andString:(NSString *)end;
+
 @end
