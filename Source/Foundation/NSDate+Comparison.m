@@ -3,7 +3,7 @@
 //  Connectae
 //
 //  Created by Ignacio on 8/12/13.
-//  Copyright (c) 2013 DZEN. All rights reserved.
+//  Copyright (c) 2013 DZN Labs. All rights reserved.
 //
 
 #import "NSDate+Comparison.h"

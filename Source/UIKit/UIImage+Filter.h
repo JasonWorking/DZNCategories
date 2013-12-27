@@ -1,9 +1,10 @@
 //
 //  UIImage+Filter.h
-//  EpicList
 //
-//  Created by Ignacio on 9/27/13.
-//  Copyright (c) 2013 Epic Peaks GmbH. All rights reserved.
+//  Created by Ignacio Romero Zurbuchen on 9/27/13.
+//  Copyright (c) 2013 DZN Labs.
+//  Licence: MIT-Licence
+//  http://opensource.org/licenses/MIT
 //
 
 #import <UIKit/UIKit.h>

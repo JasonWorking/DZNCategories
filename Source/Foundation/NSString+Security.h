@@ -2,7 +2,7 @@
 //  NSString+Security.h
 //
 //  Created by Ignacio Romero Zurbuchen on 3/14/13.
-//  Copyright (c) 2011 DZen Interaktiv.
+//  Copyright (c) 2013 DZN Labs.
 //  Licence: MIT-Licence
 //  http://opensource.org/licenses/MIT
 //

@@ -2,7 +2,7 @@
 //  NSString+Path.h
 //
 //  Created by Ignacio on 4/4/13.
-//  Copyright (c) 2013 DZEN. All rights reserved.
+//  Copyright (c) 2013 DZN Labs. All rights reserved.
 //  Licence: MIT-Licence
 //  http://opensource.org/licenses/MIT
 //

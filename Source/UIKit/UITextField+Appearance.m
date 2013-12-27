@@ -1,9 +1,10 @@
 //
 //  UITextField+Appearance.m
-//  EpicList
 //
-//  Created by Ignacio on 10/29/13.
-//  Copyright (c) 2013 Epic Peaks GmbH. All rights reserved.
+//  Created by Ignacio Romero Zurbuchen on 10/29/13.
+//  Copyright (c) 2013 DZN Labs.
+//  Licence: MIT-Licence
+//  http://opensource.org/licenses/MIT
 //
 
 #import "UITextField+Appearance.h"

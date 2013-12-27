@@ -1,9 +1,10 @@
 //
 //  UIScrollView+Scroll.m
-//  ADedo
 //
-//  Created by Ignacio on 4/20/13.
-//  Copyright (c) 2013 DZEN. All rights reserved.
+//  Created by Ignacio Romero Zurbuchen on 4/20/13.
+//  Copyright (c) 2013 DZN Labs.
+//  Licence: MIT-Licence
+//  http://opensource.org/licenses/MIT
 //
 
 #import "UIScrollView+Scroll.h"

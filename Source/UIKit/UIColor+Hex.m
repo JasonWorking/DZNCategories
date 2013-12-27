@@ -2,7 +2,7 @@
 //  UIColor+Hex.m
 //
 //  Created by Ignacio Romero Zurbuchen on 2/25/13.
-//  Copyright (c) 2011 DZen Interaktiv.
+//  Copyright (c) 2013 DZN Labs.
 //  Licence: MIT-Licence
 //  http://opensource.org/licenses/MIT
 //

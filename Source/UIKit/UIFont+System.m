@@ -1,9 +1,10 @@
 //
 //  UIFont+System.m
-//  EpicList
 //
-//  Created by Ignacio on 9/24/13.
-//  Copyright (c) 2013 Epic Peaks GmbH. All rights reserved.
+//  Created by Ignacio Romero Zurbuchen on 2/25/13.
+//  Copyright (c) 2013 DZN Labs.
+//  Licence: MIT-Licence
+//  http://opensource.org/licenses/MIT
 //
 
 #import "UIFont+System.h"
