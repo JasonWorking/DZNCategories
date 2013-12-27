@@ -23,7 +23,7 @@
 - (UIColor *)darkerColor
 {
     float h, s, b, a;
-    if ([self getHue:&h saturation:&s brightness:&b  alpha:&a]) {
+    if ([self getHue:&h saturation:&s brightness:&b alpha:&a]) {
         return [UIColor colorWithHue:h saturation:s brightness:b * 0.75 alpha:a];
     }
     return nil;

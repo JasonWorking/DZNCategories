@@ -22,6 +22,7 @@
 + (NSMutableArray *)loadArrayfromFile:(NSString *)fileName
 {
     NSString *path = [NSString getLibraryDirectoryPathForFile:[NSString stringWithFormat:@"%@.plist",fileName]];
+    NSLog(@"path : %@", path);
     return [NSKeyedUnarchiver unarchiveObjectWithFile:path];
 }
 

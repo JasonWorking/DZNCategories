@@ -33,7 +33,7 @@ static NSString *cacheFolderName = @"com.dzn.MKMapSnapshot.default";
         if (![[NSFileManager defaultManager] fileExistsAtPath:cachedImagesDirectory isDirectory:&directory]) {
             [[NSFileManager defaultManager] createDirectoryAtPath:cachedImagesDirectory withIntermediateDirectories:NO attributes:nil error:&error];
             if (error) NSLog(@"contentsOfDirectoryAtPath error : %@",error.localizedDescription);
-            NSLog(@"cachedImagesDirectory : %@",cachedImagesDirectory);
+            //NSLog(@"cachedImagesDirectory : %@",cachedImagesDirectory);
         }
         
         NSString *name = [NSString stringWithFormat:@"mapsnapshot%d_%@_%@_%@",mapType,size,center,span];
@@ -87,10 +87,8 @@ static NSString *cacheFolderName = @"com.dzn.MKMapSnapshot.default";
                     render = snapshot.image;
                 }
                 
-                
                 if (!error) {
                     [UIImagePNGRepresentation(render) writeToFile:path atomically:YES];
-                    NSLog(@"%s saved at path : %@",__FUNCTION__, path);
                 }
                 completionHandler(render,error);
             }];
