@@ -62,4 +62,13 @@
     }
 }
 
++ (UIFont *)loadFontWithName:(NSString *)fontName size:(CGFloat)size {
+    
+    NSURL * url = [[NSBundle mainBundle] URLForResource:fontName withExtension:@"ttf"];
+    CFErrorRef error;
+    CTFontManagerRegisterFontsForURL((__bridge CFURLRef)url, kCTFontManagerScopeNone, &error);
+    error = nil;
+    return [UIFont fontWithName:fontName size:size];
+}
+
 @end

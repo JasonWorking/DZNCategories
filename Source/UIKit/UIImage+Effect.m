@@ -78,7 +78,6 @@ static NSString *cacheFolderName = @"com.dzn.UIImageCache.default";
     if (![[NSFileManager defaultManager] fileExistsAtPath:cachedImagesDirectory isDirectory:&directory]) {
         [[NSFileManager defaultManager] createDirectoryAtPath:cachedImagesDirectory withIntermediateDirectories:NO attributes:nil error:&error];
         if (error) NSLog(@"contentsOfDirectoryAtPath error : %@",error.localizedDescription);
-        //NSLog(@"cachedImagesDirectory : %@",cachedImagesDirectory);
     }
     
     NSString *hex = [color hexFromColor];
@@ -105,7 +104,10 @@ static NSString *cacheFolderName = @"com.dzn.UIImageCache.default";
     NSString *cachedImagesDirectory = [cacheDirectory stringByAppendingPathComponent:cacheFolderName];
     
     NSArray *contents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:cachedImagesDirectory error:&error];
-    if (error) NSLog(@"contentsOfDirectoryAtPath error : %@",error.localizedDescription);
+    if (error) {
+        NSLog(@"%s contentsOfDirectoryAtPath error : %@",__FUNCTION__, error.localizedDescription);
+        return;
+    }
     
     for (NSString *filePath in contents) {
         

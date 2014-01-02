@@ -54,4 +54,12 @@
  */
 + (UIFont *)ultraLightSystemFontOfSize:(CGFloat)size;
 
+/*
+ * Returns an unloaded font with size.
+ *
+ * @param size The size (in points) to which the font is scaled. This value must be greater than 0.0.
+ * @returns A font object of the specified size.
+ */
++ (UIFont *)loadFontWithName:(NSString *)fontName size:(CGFloat)size;
+
 @end

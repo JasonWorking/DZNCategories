@@ -108,7 +108,10 @@ static NSString *cacheFolderName = @"com.dzn.MKMapSnapshot.default";
     NSString *cachedImagesDirectory = [cacheDirectory stringByAppendingPathComponent:cacheFolderName];
     
     NSArray *contents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:cachedImagesDirectory error:&error];
-    if (error) NSLog(@"contentsOfDirectoryAtPath error : %@",error.localizedDescription);
+    if (error) {
+        NSLog(@"%s contentsOfDirectoryAtPath error : %@",__FUNCTION__, error.localizedDescription);
+        return;
+    }
     
     for (NSString *filePath in contents) {
         

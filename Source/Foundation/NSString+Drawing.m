@@ -29,13 +29,17 @@
 
 - (NSString *)visibleStringWithinSize:(CGSize)size withFont:(UIFont *)font andParagraphStyle:(NSParagraphStyle *)style
 {
+    NSAssert(!CGSizeEqualToSize(size, CGSizeZero), @"Containment size cannot be zero");
+    NSAssert(font != nil, @"Label font cannot be nil");
+    NSAssert(style != nil, @"Label style cannot be nil");
+    
     CGSize sizeConstraint = CGSizeMake(size.width, CGFLOAT_MAX);
 
     NSDictionary *att = @{NSFontAttributeName:font, NSParagraphStyleAttributeName:style};
     NSStringDrawingOptions options = (NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading);
     
     CGRect textRect = [self boundingRectWithSize:sizeConstraint options:options attributes:att context:nil];
-
+    
     if (textRect.size.height > size.height) {
         
         for (int i = 1; i < [self length]; i++) {
