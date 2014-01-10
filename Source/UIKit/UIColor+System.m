@@ -8,6 +8,7 @@
 //
 
 #import "UIColor+System.h"
+#import "UIColor+Hex.h"
 
 @implementation UIColor (System)
 
