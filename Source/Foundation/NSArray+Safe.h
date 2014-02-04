@@ -9,14 +9,15 @@
 #import <Foundation/Foundation.h>
 
 /*
- * Safe methods for saving and retrieving data from a NSArray.
+ Safe methods for saving and retrieving data from a NSArray.
  */
 @interface NSArray (Safe)
 
-/* Returns a value associated with a given index, safely without exceeding bounds.
- *
- * @param index An index within the bounds of the array.
- * @returns Returns the object located at index.
+/*
+ Returns a value associated with a given index, safely without exceeding bounds.
+
+ @param index An index within the bounds of the array.
+ @returns Returns the object located at index.
  */
 - (id)safeObjectAtIndex:(NSUInteger)index;
 

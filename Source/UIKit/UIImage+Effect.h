@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 
 /*
- * Special effects to be applied to UIImage objects.
+ Special effects to be applied to UIImage objects.
  */
 @interface UIImage (Effect)
 

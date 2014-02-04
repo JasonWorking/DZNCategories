@@ -14,27 +14,23 @@
  */
 @interface NSURL (Query)
 
-/* Returns
+/*
  *
- * @returns
  */
 - (BOOL)hasScheme;
 
-/* Returns
+/*
  *
- * @returns
  */
 - (NSString *)noun;
 
-/* Returns
+/*
  *
- * @returns
  */
 - (NSString *)verb;
 
-/* Returns
+/*
  *
- * @returns
  */
 - (NSDictionary *)parametersString;
 

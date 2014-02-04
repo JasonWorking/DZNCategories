@@ -30,50 +30,50 @@ typedef enum CLLocationCoordinateRectPreset {
 
 
 /*
- * Return true if 'coord' is empty (that is, if it has zero values for latitude and longitude),
- * Return false otherwise. A null coordinate is defined to be empty.
- */
+ Return true if 'coord' is empty (that is, if it has zero values for latitude and longitude),
+ Return false otherwise. A null coordinate is defined to be empty.
+*/
 bool CLLocationCoordinateIsEmpty(CLLocationCoordinate2D coord);
 
 /*
- *
- */
+ 
+*/
 bool CLLocationCoordinate2DAreEqual(CLLocationCoordinate2D coord1, CLLocationCoordinate2D coord2);
 
 /*
- *
- */
+ 
+*/
 bool CLLocationCoordinate2DAreEqual(CLLocationCoordinate2D coord1, CLLocationCoordinate2D coord2);
 
 /*
- *
- */
+ 
+*/
 NSString *NSStringFromCLLocationCoordinate(CLLocationCoordinate2D coord);
 
 /*
- * Return true if 'rect' is empty (that is, if it has zero values for topLeft and bottomRight coordinates),
- * Return false otherwise. A null rect is defined to be empty.
- */
+ Returns true if 'rect' is empty (that is, if it has zero values for topLeft and bottomRight coordinates),
+ Returns false otherwise. A null rect is defined to be empty.
+*/
 bool CLLocationCoordinateRectIsEmpty(CLLocationCoordinateRect rect);
 
 /*
- *
- */
+
+*/
 NSString *NSStringFromCLLocationCoordinateRect(CLLocationCoordinateRect rect);
 
 /*
- *
- */
+ 
+*/
 CLLocationCoordinateRect CLLocationCoordinateRectMake(CLLocationCoordinate2D topLeft, CLLocationCoordinate2D bottomRight);
 
 /*
- *
- */
+ 
+*/
 CLLocationCoordinateRect CLLocationCoordinateRectWithPreset(CLLocationCoordinateRectPreset preset);
 
 /*
- *
- */
+ 
+*/
 CLLocationCoordinateRect CLLocationCoordinateRectFromCenter(CLLocationCoordinate2D center, CLLocationDistance radius);
 
 

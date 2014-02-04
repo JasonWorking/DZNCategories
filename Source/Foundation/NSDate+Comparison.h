@@ -9,27 +9,27 @@
 #import <Foundation/Foundation.h>
 
 /*
- * Useful methods for comparing dates.
- */
+ Useful methods for comparing dates.
+*/
 @interface NSDate (Comparison)
 
 /**
- *
- */
+ 
+*/
 - (BOOL)isToday;
 
 /**
- *
+ 
  */
 - (BOOL)isYesterday;
 
 /**
- *
+ 
  */
 - (BOOL)isFirstDayOfMonth;
 
 /**
- *
+ 
  */
 - (BOOL)hasSameUnit:(unsigned)unitFlags thanDate:(NSDate *)date;
 
