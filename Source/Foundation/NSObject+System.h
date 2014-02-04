@@ -10,7 +10,7 @@
 #import <Foundation/Foundation.h>
 
 #define IPHONE_5_HEIGHT 568.0f
-#define IPHONE_4_HEIGHT 568.0f
+#define IPHONE_4_HEIGHT 480.0f
 #define IPHONE_HEIGHT_DELTA 568.0f - 480.0f
 
 #define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)

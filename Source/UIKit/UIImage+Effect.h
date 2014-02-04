@@ -24,9 +24,14 @@
 
 /*
  */
++ (UIImage *)imageWithColor:(UIColor *)color cornerRadius:(CGFloat)cornerRadius;
+
+/*
+ */
 + (UIImage *)imageNamed:(NSString *)name andColored:(UIColor *)color;
 
 /*
+ Removes all cached images that have been generated with the [+imageNamed:andColored:] method.
  */
 + (void)clearCachedImages;
 
@@ -35,9 +40,9 @@
 - (UIImage *)coloredImage:(UIColor *)color;
 
 /*
- * Transforms the image to grayscale.
- *
- * @returns The new grayscale image.
+ Transforms the image to grayscale.
+ 
+ @returns The new grayscale image.
  */
 - (UIImage *)imageToGrayscale;
 
