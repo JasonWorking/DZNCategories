@@ -1,8 +1,8 @@
 //
 //  NSManagedObjectContext+Management.h
-//  Connectae
+//  DZNCategories
 //
-//  Created by Ignacio on 8/24/13.
+//  Created by Ignacio Romero Zurbuchen on 8/24/13.
 //  Copyright (c) 2013 DZN Labs. All rights reserved.
 //
 

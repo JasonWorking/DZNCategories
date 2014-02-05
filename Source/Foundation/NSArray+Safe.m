@@ -1,8 +1,8 @@
 //
 //  NSArray+Safe.m
-//  ADedo
+//  DZNCategories
 //
-//  Created by Ignacio on 4/19/13.
+//  Created by Ignacio Romero Zurbuchen on 4/19/13.
 //  Copyright (c) 2013 DZN Labs. All rights reserved.
 //
 

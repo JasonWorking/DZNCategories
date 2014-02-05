@@ -2,7 +2,7 @@
 //  NSString_Drawing.h
 //  Sample
 //
-//  Created by Ignacio on 11/16/13.
+//  Created by Ignacio Romero Zurbuchen on 11/16/13.
 //  Copyright (c) 2013 DZen Interaktiv. All rights reserved.
 //
 

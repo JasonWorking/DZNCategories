@@ -1,9 +1,11 @@
 //
 //  NSObject+KVC.m
-//  EpicList
+//  DZNCategories
 //
-//  Created by Ignacio on 9/17/13.
-//  Copyright (c) 2013 Epic Peaks GmbH. All rights reserved.
+//  Created by Ignacio Romero Zurbuchen on 9/17/13.
+//  Copyright (c) 2013 DZN Labs. All rights reserved.
+//  Licence: MIT-Licence
+//  http://opensource.org/licenses/MIT
 //
 
 #import "NSObject+KVC.h"

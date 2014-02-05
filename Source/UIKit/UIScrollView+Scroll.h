@@ -1,8 +1,9 @@
 //
 //  UIScrollView+Scroll.h
+//  DZNCategories
 //
 //  Created by Ignacio Romero Zurbuchen on 4/20/13.
-//  Copyright (c) 2013 DZN Labs.
+//  Copyright (c) 2013 DZN Labs. All rights reserved.
 //  Licence: MIT-Licence
 //  http://opensource.org/licenses/MIT
 //

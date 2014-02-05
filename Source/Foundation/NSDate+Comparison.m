@@ -1,9 +1,11 @@
 //
 //  NSDate+Comparison.m
-//  Connectae
+//  DZNCategories
 //
-//  Created by Ignacio on 8/12/13.
+//  Created by Ignacio Romero Zurbuchen on 8/12/13.
 //  Copyright (c) 2013 DZN Labs. All rights reserved.
+//  Licence: MIT-Licence
+//  http://opensource.org/licenses/MITs
 //
 
 #import "NSDate+Comparison.h"

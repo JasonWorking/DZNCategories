@@ -1,8 +1,8 @@
 //
 //  NSDate+Calendar.h
-//  Sample
+//  DZNCategories
 //
-//  Created by Ignacio on 8/15/13.
+//  Created by Ignacio Romero Zurbuchen on 8/15/13.
 //  Copyright (c) 2013 DZN Labs. All rights reserved.
 //
 

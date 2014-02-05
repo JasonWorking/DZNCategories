@@ -1,8 +1,8 @@
 //
 //  NSArray+Query.m
-//  ADedo
+//  DZNCategories
 //
-//  Created by Ignacio on 3/25/13.
+//  Created by Ignacio Romero Zurbuchen on 3/25/13.
 //  Copyright (c) 2013 DZN Labs. All rights reserved.
 //  Licence: MIT-Licence
 //  http://opensource.org/licenses/MIT

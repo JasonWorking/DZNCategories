@@ -1,9 +1,11 @@
 //
 //  NSString+Safe.h
-//  EpicList
+//  DZNCategories
 //
-//  Created by Ignacio on 12/5/13.
-//  Copyright (c) 2013 Epic Peaks GmbH. All rights reserved.
+//  Created by Ignacio Romero Zurbuchen on 12/5/13.
+//  Copyright (c) 2014 DZN Labs. All rights reserved.
+//  Licence: MIT-Licence
+//  http://opensource.org/licenses/MIT
 //
 
 #import <Foundation/Foundation.h>

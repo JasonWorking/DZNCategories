@@ -1,8 +1,9 @@
 //
 //  MKMapView+Zoom.m
+//  DZNCategories
 //
 //  Created by Ignacio Romero Zurbuchen on 11/05/13.
-//  Copyright (c) 2013 DZN Labs.
+//  Copyright (c) 2013 DZN Labs. All rights reserved.
 //  Licence: MIT-Licence
 //  http://opensource.org/licenses/MIT
 //
