@@ -76,7 +76,7 @@
 		4FB3AC5317BDB31200AA4D58 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB3AC4917BDB0F500AA4D58 /* CoreData.framework */; };
 		4FB3AC5417BDB31500AA4D58 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB3AC4517BDB0E900AA4D58 /* CoreLocation.framework */; };
 		4FB3AC5717BDB7FA00AA4D58 /* NSDate_Converter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB3AC5617BDB7FA00AA4D58 /* NSDate_Converter.m */; };
-		4FB3AC5A17BDB84B00AA4D58 /* DZCategoriesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB3AC5917BDB84B00AA4D58 /* DZCategoriesTest.m */; };
+		4FB3AC5A17BDB84B00AA4D58 /* DZNCategoriesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB3AC5917BDB84B00AA4D58 /* DZNCategoriesTest.m */; };
 		4FC58349183814C300D1978F /* NSString_Drawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC58348183814C300D1978F /* NSString_Drawing.m */; };
 /* End PBXBuildFile section */
 
@@ -107,7 +107,7 @@
 		4F14A9BA18809ADE0062A624 /* CGGeometry+UIEdgeInsets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGGeometry+UIEdgeInsets.m"; sourceTree = "<group>"; };
 		4F14A9BC18809ADE0062A624 /* CLLocation+Coordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+Coordinate.h"; sourceTree = "<group>"; };
 		4F14A9BD18809ADE0062A624 /* CLLocation+Coordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+Coordinate.m"; sourceTree = "<group>"; };
-		4F14A9BE18809ADE0062A624 /* DZCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZCategories.h; sourceTree = "<group>"; };
+		4F14A9BE18809ADE0062A624 /* DZNCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZNCategories.h; sourceTree = "<group>"; };
 		4F14A9C018809ADE0062A624 /* NSArray+Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Query.h"; sourceTree = "<group>"; };
 		4F14A9C118809ADE0062A624 /* NSArray+Query.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Query.m"; sourceTree = "<group>"; };
 		4F14A9C218809ADE0062A624 /* NSArray+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Safe.h"; sourceTree = "<group>"; };
@@ -211,8 +211,8 @@
 		4FB3AC4F17BDB25F00AA4D58 /* Foundation_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Foundation_Test.m; path = Foundation/Foundation_Test.m; sourceTree = "<group>"; };
 		4FB3AC5517BDB7FA00AA4D58 /* NSDate_Converter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSDate_Converter.h; path = Foundation/NSDate_Converter.h; sourceTree = "<group>"; };
 		4FB3AC5617BDB7FA00AA4D58 /* NSDate_Converter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSDate_Converter.m; path = Foundation/NSDate_Converter.m; sourceTree = "<group>"; };
-		4FB3AC5817BDB84B00AA4D58 /* DZCategoriesTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZCategoriesTest.h; sourceTree = "<group>"; };
-		4FB3AC5917BDB84B00AA4D58 /* DZCategoriesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZCategoriesTest.m; sourceTree = "<group>"; };
+		4FB3AC5817BDB84B00AA4D58 /* DZNCategoriesTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZNCategoriesTest.h; sourceTree = "<group>"; };
+		4FB3AC5917BDB84B00AA4D58 /* DZNCategoriesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZNCategoriesTest.m; sourceTree = "<group>"; };
 		4FC58347183814C300D1978F /* NSString_Drawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSString_Drawing.h; path = Foundation/NSString_Drawing.h; sourceTree = "<group>"; };
 		4FC58348183814C300D1978F /* NSString_Drawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSString_Drawing.m; path = Foundation/NSString_Drawing.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -251,10 +251,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4F14A9AC18809ADE0062A624 /* DZCategories */ = {
+		4F14A9AC18809ADE0062A624 /* DZNCategories */ = {
 			isa = PBXGroup;
 			children = (
-				4F14A9BE18809ADE0062A624 /* DZCategories.h */,
+				4F14A9BE18809ADE0062A624 /* DZNCategories.h */,
 				4F14A9AD18809ADE0062A624 /* CoreData */,
 				4F14A9B218809ADE0062A624 /* CoreGraphics */,
 				4F14A9BB18809ADE0062A624 /* CoreLocation */,
@@ -262,7 +262,7 @@
 				4F14A9E618809ADE0062A624 /* MapKit */,
 				4F14A9F118809ADE0062A624 /* UIKit */,
 			);
-			name = DZCategories;
+			name = DZNCategories;
 			path = ../Source;
 			sourceTree = "<group>";
 		};
@@ -406,7 +406,7 @@
 				4F3FD11E17FF03D000024DE1 /* Default-568h@2x.png */,
 				4FB3AB9617BDB03100AA4D58 /* Sample */,
 				4FB3ABB417BDB03200AA4D58 /* SampleTests */,
-				4F14A9AC18809ADE0062A624 /* DZCategories */,
+				4F14A9AC18809ADE0062A624 /* DZNCategories */,
 				4FB3AB8F17BDB03100AA4D58 /* Frameworks */,
 				4FB3AB8E17BDB03100AA4D58 /* Products */,
 			);
@@ -463,8 +463,8 @@
 			children = (
 				4FB3ABBA17BDB03200AA4D58 /* SampleTests.h */,
 				4FB3ABBB17BDB03200AA4D58 /* SampleTests.m */,
-				4FB3AC5817BDB84B00AA4D58 /* DZCategoriesTest.h */,
-				4FB3AC5917BDB84B00AA4D58 /* DZCategoriesTest.m */,
+				4FB3AC5817BDB84B00AA4D58 /* DZNCategoriesTest.h */,
+				4FB3AC5917BDB84B00AA4D58 /* DZNCategoriesTest.m */,
 				4FB3AC4417BDB0BB00AA4D58 /* UIKit */,
 				4FB3AC4317BDB0B600AA4D58 /* Foundation */,
 				4FB3AC4217BDB0B000AA4D58 /* CoreLocation */,
@@ -692,7 +692,7 @@
 				4FB3AC5017BDB25F00AA4D58 /* Foundation_Test.m in Sources */,
 				4FB3AC5717BDB7FA00AA4D58 /* NSDate_Converter.m in Sources */,
 				4FC58349183814C300D1978F /* NSString_Drawing.m in Sources */,
-				4FB3AC5A17BDB84B00AA4D58 /* DZCategoriesTest.m in Sources */,
+				4FB3AC5A17BDB84B00AA4D58 /* DZNCategoriesTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

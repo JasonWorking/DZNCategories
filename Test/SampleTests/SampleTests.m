@@ -7,7 +7,7 @@
 //
 
 #import "SampleTests.h"
-#import "DZCategoriesTest.h"
+#import "DZNCategoriesTest.h"
 
 @implementation SampleTests
 
@@ -23,11 +23,11 @@
 
 - (void)testCategories
 {
-    [DZCategoriesTest testUIKit];
-    [DZCategoriesTest testFoundation];
-    [DZCategoriesTest testCoreLocation];
-    [DZCategoriesTest testCoreGraphics];
-    [DZCategoriesTest testCoreData];
+    [DZNCategoriesTest testUIKit];
+    [DZNCategoriesTest testFoundation];
+    [DZNCategoriesTest testCoreLocation];
+    [DZNCategoriesTest testCoreGraphics];
+    [DZNCategoriesTest testCoreData];
 }
 
 @end

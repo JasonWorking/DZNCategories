@@ -1,5 +1,5 @@
 //
-//  DZCategoriesTest.h
+//  DZNCategoriesTest.h
 //  Sample
 //
 //  Created by Ignacio Romero Zurbuchen on 8/15/13.
@@ -8,7 +8,7 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-@interface DZCategoriesTest : SenTestCase
+@interface DZNCategoriesTest : SenTestCase
 
 + (void)testUIKit;
 + (void)testFoundation;
