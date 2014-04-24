@@ -12,31 +12,18 @@
 
 @interface MKMapView (Region)
 
-
-/*
- *
- */
-- (MKCoordinateRegion)regionFromOrigin:(CLLocationCoordinate2D)origin toDestination:(CLLocationCoordinate2D)destination withTolerance:(CGFloat)tolerance;
-
-/*
- *
- */
-- (MKCoordinateRegion)regionFromOrigin:(CLLocationCoordinate2D)origin toDestination:(CLLocationCoordinate2D)destination;
-
-/*
- *
- */
-- (MKCoordinateRegion)regionFromUserLocation;
-
-/*
- *
- */
-- (MKCoordinateRegion)regionFromLocation:(CLLocationCoordinate2D)coordinate;
-
-/*
- *
- */
 - (BOOL)isValidRegion:(MKCoordinateRegion)region;
 
+- (MKCoordinateRegion)regionFromOrigin:(CLLocationCoordinate2D)origin toDestination:(CLLocationCoordinate2D)destination withTolerance:(CGFloat)tolerance;
+
+- (MKCoordinateRegion)regionFromOrigin:(CLLocationCoordinate2D)origin toDestination:(CLLocationCoordinate2D)destination;
+
+- (MKCoordinateRegion)regionFromUserLocation;
+
+- (MKCoordinateRegion)regionFromLocation:(CLLocationCoordinate2D)coordinate;
+
+- (MKCoordinateRegion)regionForAnnotations;
+
+- (MKCoordinateRegion)regionForAnnotationsWithPadding:(CGFloat)padding;
 
 @end

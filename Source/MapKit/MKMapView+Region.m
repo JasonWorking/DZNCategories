@@ -12,6 +12,16 @@
 
 @implementation MKMapView (Region)
 
+- (BOOL)isValidRegion:(MKCoordinateRegion)region
+{
+    if (region.center.latitude > 90.0f || region.center.latitude < -90.0f ||
+        region.center.longitude > 360.0f || region.center.longitude < -180.0f) {
+        
+        return YES;
+    }
+    else return NO;
+}
+
 - (MKCoordinateRegion)regionFromOrigin:(CLLocationCoordinate2D)origin toDestination:(CLLocationCoordinate2D)destination withTolerance:(CGFloat)tolerance
 {
     CLLocationCoordinate2D _origin = origin;
@@ -49,14 +59,38 @@
     return region;
 }
 
-- (BOOL)isValidRegion:(MKCoordinateRegion)region
+- (MKCoordinateRegion)regionForAnnotations
 {
-    if (region.center.latitude > 90.0f || region.center.latitude < -90.0f ||
-        region.center.longitude > 360.0f || region.center.longitude < -180.0f) {
-        
-        return YES;
+    return [self regionForAnnotationsWithPadding:0];
+}
+
+- (MKCoordinateRegion)regionForAnnotationsWithPadding:(CGFloat)padding
+{
+    CLLocationDegrees minLat = 90.0;
+    CLLocationDegrees maxLat = -90.0;
+    CLLocationDegrees minLon = 180.0;
+    CLLocationDegrees maxLon = -180.0;
+    
+    for (id <MKAnnotation> annotation in self.annotations) {
+        if (annotation.coordinate.latitude < minLat) {
+            minLat = annotation.coordinate.latitude;
+        }
+        if (annotation.coordinate.longitude < minLon) {
+            minLon = annotation.coordinate.longitude;
+        }
+        if (annotation.coordinate.latitude > maxLat) {
+            maxLat = annotation.coordinate.latitude;
+        }
+        if (annotation.coordinate.longitude > maxLon) {
+            maxLon = annotation.coordinate.longitude;
+        }
     }
-    else return NO;
+    
+    MKCoordinateSpan span = MKCoordinateSpanMake((maxLat - minLat)+padding*2, (maxLon - minLon)+padding*2);
+    
+    CLLocationCoordinate2D center = CLLocationCoordinate2DMake(((maxLat - span.latitudeDelta / 2))+padding, (maxLon - span.longitudeDelta / 2)+padding);
+    
+    return MKCoordinateRegionMake(center, span);
 }
 
 @end
