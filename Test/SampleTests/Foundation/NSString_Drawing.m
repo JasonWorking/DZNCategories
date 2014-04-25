@@ -15,7 +15,7 @@ static NSString *lorem = @"Lorem ipsum dolor sit amet, consectetur adipiscing el
 
 + (void)testReducedString
 {
-    NSString *drawedText = [lorem stringReducedToSize:CGSizeMake(320.0, 40) withFont:[UIFont systemFontOfSize:15.0]];
+    NSString *drawedText = [lorem visibleStringWithinSize:CGSizeMake(320.0, 40) withFont:[UIFont systemFontOfSize:15.0] andParagraphStyle:nil];
     NSLog(@"drawedText : %@", drawedText);
     
     NSAssert((drawedText.length > 0), @"NSString+Drawing: @testReducedString");

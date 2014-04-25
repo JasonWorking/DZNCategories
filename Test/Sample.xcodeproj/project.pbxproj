@@ -186,7 +186,7 @@
 		4F14AA0D18809ADE0062A624 /* UIView+Effect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Effect.m"; sourceTree = "<group>"; };
 		4F14AA0E18809ADE0062A624 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		4F14AA0F18809ADE0062A624 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
-		4F3FD11E17FF03D000024DE1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		4F3FD11E17FF03D000024DE1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		4F3FD1B317FF04E800024DE1 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		4FB3AB8D17BDB03100AA4D58 /* Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FB3AB9017BDB03100AA4D58 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -403,10 +403,9 @@
 		4FB3AB8417BDB03100AA4D58 = {
 			isa = PBXGroup;
 			children = (
-				4F3FD11E17FF03D000024DE1 /* Default-568h@2x.png */,
+				4F14A9AC18809ADE0062A624 /* DZNCategories */,
 				4FB3AB9617BDB03100AA4D58 /* Sample */,
 				4FB3ABB417BDB03200AA4D58 /* SampleTests */,
-				4F14A9AC18809ADE0062A624 /* DZNCategories */,
 				4FB3AB8F17BDB03100AA4D58 /* Frameworks */,
 				4FB3AB8E17BDB03100AA4D58 /* Products */,
 			);
@@ -452,6 +451,7 @@
 			isa = PBXGroup;
 			children = (
 				4FB3AB9817BDB03100AA4D58 /* Sample-Info.plist */,
+				4F3FD11E17FF03D000024DE1 /* Default-568h@2x.png */,
 				4FB3AB9C17BDB03100AA4D58 /* main.m */,
 				4FB3AB9E17BDB03100AA4D58 /* Sample-Prefix.pch */,
 			);
@@ -572,6 +572,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = DZ;
+				LastTestingUpgradeCheck = 0510;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "DZen Interaktiv";
 			};

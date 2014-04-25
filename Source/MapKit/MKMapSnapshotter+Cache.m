@@ -37,7 +37,7 @@ static NSString *cacheFolderName = @"com.dzn.MKMapSnapshot.default";
             //NSLog(@"cachedImagesDirectory : %@",cachedImagesDirectory);
         }
         
-        NSString *name = [NSString stringWithFormat:@"mapsnapshot%d_%@_%@_%@",mapType,size,center,span];
+        NSString *name = [NSString stringWithFormat:@"mapsnapshot%d_%@_%@_%@", (int)mapType,size,center,span];
         NSString *path = [cachedImagesDirectory stringByAppendingPathComponent:name];
         if (scale == 2.0) path = [path stringByAppendingString:@"@2x"];
         path = [path stringByAppendingString:@".png"];

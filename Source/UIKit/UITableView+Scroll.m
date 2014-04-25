@@ -32,12 +32,8 @@
     NSInteger lastSection = [self.dataSource numberOfSectionsInTableView:self]-1;
     NSInteger lastRow = [self.dataSource tableView:self numberOfRowsInSection:lastSection]-1;
     
-    NSLog(@"%s indexPath row : %d section : %d", __FUNCTION__, lastRow, lastSection);
-
     if (lastSection < 0) lastSection = 0;
     if (lastRow < 0) lastRow = 0;
-    
-    NSLog(@"%s indexPath row : %d section : %d", __FUNCTION__, lastRow, lastSection);
     
     return [NSIndexPath indexPathForRow:lastRow inSection:lastSection];
 }
