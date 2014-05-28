@@ -12,10 +12,6 @@
 
 @implementation UITextField (Behaviour)
 
-/*
- Replaces the lower case strings by uppercase on the fly.
- To be used on UITextFieldDelegate method textField:shouldChangeCharactersInRange:replacementString:
- */
 - (void)shouldCapitalizeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     UITextPosition *beginning = self.beginningOfDocument;
