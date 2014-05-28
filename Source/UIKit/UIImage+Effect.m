@@ -15,8 +15,6 @@
 #import <QuartzCore/QuartzCore.h>
 #import <CoreImage/CoreImage.h>
 
-static NSString *cacheFolderName = @"com.dzn.UIImageCache.default";
-
 @implementation UIImage (Effect)
 
 - (UIImage *)imageWithMask:(UIImage *)maskImg
@@ -88,60 +86,9 @@ static NSString *cacheFolderName = @"com.dzn.UIImageCache.default";
     return [image resizableImageWithCapInsets:UIEdgeInsetsMake(cornerRadius, cornerRadius, cornerRadius, cornerRadius)];
 }
 
-+ (UIImage *)imageNamed:(NSString *)name andColored:(UIColor *)color
-{
-    BOOL directory;
-    NSError *error = nil;
-    CGFloat scale = [UIScreen mainScreen].scale;
-    
-    NSString *cacheDirectory = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *cachedImagesDirectory = [cacheDirectory stringByAppendingPathComponent:cacheFolderName];
-    if (![[NSFileManager defaultManager] fileExistsAtPath:cachedImagesDirectory isDirectory:&directory]) {
-        [[NSFileManager defaultManager] createDirectoryAtPath:cachedImagesDirectory withIntermediateDirectories:NO attributes:nil error:&error];
-        if (error) NSLog(@"contentsOfDirectoryAtPath error : %@",error.localizedDescription);
-    }
-    
-    NSString *hex = [color hexFromColor];
-    NSString *path = [cachedImagesDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@_%@",name,hex]];
-    if (scale == 2.0) path = [path stringByAppendingString:@"@2x"];
-    
-    path = [path stringByAppendingString:@".png"];
-    
-    if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
-        UIImage *image = [[UIImage imageNamed:name] coloredImage:color];
-        [UIImagePNGRepresentation(image) writeToFile:path atomically:YES];
-        return image;
-    }
-        
-    NSData *data = [NSData dataWithContentsOfFile:path];
-    return [UIImage imageWithData:data scale:scale];
-}
 
-+ (void)clearCachedImages
-{
-    NSError *error = nil;
-    
-    NSString *cacheDirectory = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *cachedImagesDirectory = [cacheDirectory stringByAppendingPathComponent:cacheFolderName];
-    
-    NSArray *contents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:cachedImagesDirectory error:&error];
-    if (error) {
-        NSLog(@"%s contentsOfDirectoryAtPath error : %@",__FUNCTION__, error.localizedDescription);
-        return;
-    }
-    
-    for (NSString *filePath in contents) {
-        
-        NSString *path = [cachedImagesDirectory stringByAppendingPathComponent:filePath];
 
-        if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
-            
-            [[NSFileManager defaultManager] removeItemAtPath:path error:&error];
-            if (error) NSLog(@"removeItemAtPath error : %@",error.localizedDescription);
-            else NSLog(@"removed Item At Path : %@",path);
-        }
-    }
-}
+
 
 - (UIImage *)coloredImage:(UIColor *)color
 {
