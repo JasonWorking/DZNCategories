@@ -88,8 +88,6 @@
     [self rasterize];
 }
 
-
-
 - (void)addPathEmbossWithOffset:(CGSize)offset opacity:(CGFloat)opacity andRadius:(CGFloat)radius andFrame:(CGRect)frame
 {
     [self addPathShadowWithOffset:offset opacity:opacity andRadius:radius andFrame:frame];

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F120B64192E53FF0006DE99 /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F120B63192E53FF0006DE99 /* UIView+AutoLayout.m */; };
 		4F1483211810D97800770FAE /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1483201810D97800770FAE /* CoreText.framework */; };
 		4F1483231810D9A600770FAE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1483221810D9A600770FAE /* MapKit.framework */; };
 		4F14AA1018809ADE0062A624 /* NSFetchedResultsController+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F14A9AF18809ADE0062A624 /* NSFetchedResultsController+Safe.m */; };
@@ -57,6 +58,7 @@
 		4F14AA3D18809ADE0062A624 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F14AA0F18809ADE0062A624 /* UIView+Frame.m */; };
 		4F3FD11F17FF03D000024DE1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F3FD11E17FF03D000024DE1 /* Default-568h@2x.png */; };
 		4F3FD1B417FF04E800024DE1 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F3FD1B317FF04E800024DE1 /* CoreImage.framework */; };
+		4FA22D271936ABDD0070D961 /* UIImage+Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA22D261936ABDD0070D961 /* UIImage+Cache.m */; };
 		4FB3AB9117BDB03100AA4D58 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB3AB9017BDB03100AA4D58 /* UIKit.framework */; };
 		4FB3AB9317BDB03100AA4D58 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB3AB9217BDB03100AA4D58 /* Foundation.framework */; };
 		4FB3AB9517BDB03100AA4D58 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB3AB9417BDB03100AA4D58 /* CoreGraphics.framework */; };
@@ -91,6 +93,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F120B62192E53FF0006DE99 /* UIView+AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoLayout.h"; sourceTree = "<group>"; };
+		4F120B63192E53FF0006DE99 /* UIView+AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoLayout.m"; sourceTree = "<group>"; };
 		4F1483201810D97800770FAE /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		4F1483221810D9A600770FAE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4F14A9AE18809ADE0062A624 /* NSFetchedResultsController+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFetchedResultsController+Safe.h"; sourceTree = "<group>"; };
@@ -188,6 +192,8 @@
 		4F14AA0F18809ADE0062A624 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		4F3FD11E17FF03D000024DE1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		4F3FD1B317FF04E800024DE1 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		4FA22D251936ABDD0070D961 /* UIImage+Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Cache.h"; sourceTree = "<group>"; };
+		4FA22D261936ABDD0070D961 /* UIImage+Cache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Cache.m"; sourceTree = "<group>"; };
 		4FB3AB8D17BDB03100AA4D58 /* Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FB3AB9017BDB03100AA4D58 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4FB3AB9217BDB03100AA4D58 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -366,6 +372,8 @@
 		4F14A9F118809ADE0062A624 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				4F120B62192E53FF0006DE99 /* UIView+AutoLayout.h */,
+				4F120B63192E53FF0006DE99 /* UIView+AutoLayout.m */,
 				4F14A9F218809ADE0062A624 /* UIColor+Effect.h */,
 				4F14A9F318809ADE0062A624 /* UIColor+Effect.m */,
 				4F14A9F418809ADE0062A624 /* UIColor+Hex.h */,
@@ -378,6 +386,8 @@
 				4F14A9FB18809ADE0062A624 /* UIImage+Alpha.m */,
 				4F14A9FC18809ADE0062A624 /* UIImage+Effect.h */,
 				4F14A9FD18809ADE0062A624 /* UIImage+Effect.m */,
+				4FA22D251936ABDD0070D961 /* UIImage+Cache.h */,
+				4FA22D261936ABDD0070D961 /* UIImage+Cache.m */,
 				4F14A9FE18809ADE0062A624 /* UIImage+Filter.h */,
 				4F14A9FF18809ADE0062A624 /* UIImage+Filter.m */,
 				4F14AA0018809ADE0062A624 /* UIImage+Resize.h */,
@@ -666,6 +676,7 @@
 				4F14AA1618809ADE0062A624 /* CLLocation+Coordinate.m in Sources */,
 				4F14AA3618809ADE0062A624 /* UIImage+Resize.m in Sources */,
 				4F14AA1C18809ADE0062A624 /* NSDictionary+Safe.m in Sources */,
+				4F120B64192E53FF0006DE99 /* UIView+AutoLayout.m in Sources */,
 				4F14AA2318809ADE0062A624 /* NSString+Path.m in Sources */,
 				4F14AA1318809ADE0062A624 /* CGGeometry+Rect.m in Sources */,
 				4F14AA3818809ADE0062A624 /* UIScrollView+Scroll.m in Sources */,
@@ -680,6 +691,7 @@
 				4F14AA1518809ADE0062A624 /* CGGeometry+UIEdgeInsets.m in Sources */,
 				4F14AA2718809ADE0062A624 /* NSString+Time.m in Sources */,
 				4F14AA2C18809ADE0062A624 /* MKMapView+Center.m in Sources */,
+				4FA22D271936ABDD0070D961 /* UIImage+Cache.m in Sources */,
 				4F14AA1418809ADE0062A624 /* CGGeometry+Size.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
