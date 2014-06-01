@@ -63,6 +63,16 @@
     }
 }
 
++ (UIFont *)thinSystemFontOfSize:(CGFloat)size {
+    
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
+        return [UIFont fontWithName:@"HelveticaNeue-Thin" size:size];
+    }
+    else {
+        return nil;
+    }
+}
+
 + (UIFont *)loadFontWithName:(NSString *)fontName size:(CGFloat)size {
     
     NSURL * url = [[NSBundle mainBundle] URLForResource:fontName withExtension:@"ttf"];

@@ -56,6 +56,14 @@ Complementary methods to add missing system fonts to UIFont API.
 + (UIFont *)ultraLightSystemFontOfSize:(CGFloat)size;
 
 /*
+ * Returns the font object used for standard interface items that are rendered in thinface type in the specified size.
+ *
+ * @param size The size (in points) to which the font is scaled. This value must be greater than 0.0.
+ * @returns A font object of the specified size.
+ */
++ (UIFont *)thinSystemFontOfSize:(CGFloat)size;
+
+/*
  * Returns an unloaded font with size.
  *
  * @param size The size (in points) to which the font is scaled. This value must be greater than 0.0.
