@@ -15,7 +15,11 @@ static NSString *lorem = @"Lorem ipsum dolor sit amet, consectetur adipiscing el
 
 + (void)testReducedString
 {
-    NSString *drawedText = [lorem visibleStringWithinSize:CGSizeMake(320.0, 40) withFont:[UIFont systemFontOfSize:15.0] andParagraphStyle:nil];
+    NSMutableParagraphStyle *paragraphStyle = [NSMutableParagraphStyle new];
+    paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
+    paragraphStyle.alignment = NSTextAlignmentLeft;
+    
+    NSString *drawedText = [lorem visibleStringWithinSize:CGSizeMake(320.0, 40) withFont:[UIFont systemFontOfSize:15.0] andParagraphStyle:paragraphStyle];
     NSLog(@"drawedText : %@", drawedText);
     
     NSAssert((drawedText.length > 0), @"NSString+Drawing: @testReducedString");
