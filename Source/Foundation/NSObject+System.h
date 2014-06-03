@@ -19,6 +19,11 @@
 #define IS_IPHONE_5 (IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == IPHONE_5_HEIGHT)
 #define IS_IPHONE_4 (IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == IPHONE_4_HEIGHT)
 
+#define IS_IOS7 ([[UIDevice currentDevice].systemVersion floatValue] >= 7.0 && [[UIDevice currentDevice].systemVersion floatValue] >= 8.0)
+#define IS_IOS8 ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0)
+
+#define IS_RETINA ([UIScreen mainScreen].scale > 1.0)
+
 /*
  Useful system methods.
 */
@@ -55,13 +60,6 @@
 
 */
 + (BOOL)isOSMinimumRequired:(NSString *)minimum;
-
-/*
- Checks if the device has a retina display or not.
-
- @retuns Yes if the device is retina.
-*/
-+ (BOOL)isRetina;
 
 /*
  Returns the device density value.

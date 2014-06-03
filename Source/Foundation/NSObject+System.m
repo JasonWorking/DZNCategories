@@ -74,17 +74,9 @@
     else return NO;
 }
 
-+ (BOOL)isRetina
-{
-    if ([[UIScreen mainScreen] respondsToSelector:@selector(displayLinkWithTarget:selector:)] &&
-        ([UIScreen mainScreen].scale == 2.0)) return YES;
-    else return NO;
-}
-
 + (float)density
 {
-    if ([self isRetina]) return 2.0;
-    else return 1.0;
+    return [UIScreen mainScreen].scale;
 }
 
 + (NSString *)bundleName
