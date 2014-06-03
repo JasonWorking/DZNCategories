@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name                = "DZNCategories"
-  s.version             = "1.1"
+  s.version             = "1.1.1"
   s.summary             = "Useful collection of Objective-C category classes."
   s.homepage            = "https://github.com/dzenbot/DZNCategories"
   s.license             = { :type => 'MIT', :file => 'LICENSE' }
