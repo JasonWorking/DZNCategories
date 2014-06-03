@@ -29,10 +29,6 @@
 
 /*
  */
-+ (UIImage *)imageNamed:(NSString *)name andColored:(UIColor *)color;
-
-/*
- */
 - (UIImage *)coloredImage:(UIColor *)color;
 
 /*
