@@ -39,6 +39,7 @@
 #import "UIImage+Resize.h"
 #import "UIImage+Effect.h"
 #import "UIImage+Filter.h"
+#import "UIImage+Cache.h"
 #import "UIScrollView+Scroll.h"
 #import "UITableView+Scroll.h"
 #import "UITextField+Appearance.h"
@@ -64,5 +65,3 @@
 #import "MKGeometry+Rect.h"
 #import "MKMapView+Zoom.h"
 #import "MKMapSnapshotter+Cache.h"
-
-
