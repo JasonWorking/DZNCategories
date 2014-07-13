@@ -62,7 +62,11 @@
 
 + (NSString *)OSVersion
 {
+#if TARGET_OS_IPHONE
     return [[UIDevice currentDevice] systemVersion];
+#else
+    return nil;
+#endif
 }
 
 + (BOOL)isOSMinimumRequired:(NSString *)minimum
@@ -76,7 +80,12 @@
 
 + (float)density
 {
+#if TARGET_OS_IPHONE
     return [UIScreen mainScreen].scale;
+#else
+    return 0.0;
+#endif
+    
 }
 
 + (NSString *)bundleName
@@ -101,8 +110,12 @@
 
 + (BOOL)isJailbroken
 {
+#if TARGET_OS_IPHONE
     NSURL *URL = [NSURL URLWithString:@"cydia://"];
     return [[UIApplication sharedApplication] canOpenURL:URL];
+#else
+    return NO;
+#endif
 }
 
 @end

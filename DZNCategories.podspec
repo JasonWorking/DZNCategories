@@ -10,7 +10,8 @@ Pod::Spec.new do |s|
   s.source              = { :git => "https://github.com/dzenbot/DZNCategories.git", :tag => "v#{s.version}" }
   
   # Platform setup
-  s.platform            = :ios, '7.0'
+  s.ios.deployment_target = '7.0'
+  s.osx.deployment_target = '10.8'
   s.requires_arc        = true
 
   # Include Foundation as default spec
