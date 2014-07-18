@@ -20,13 +20,15 @@
 + (UIColor *)colorFromHex:(NSString *)hex alpha:(CGFloat)alpha
 {
     NSString *cleanString = [hex stringByReplacingOccurrencesOfString:@"#" withString:@""];
-    if([cleanString length] == 3) {
+    
+    if ([cleanString length] == 3) {
         cleanString = [NSString stringWithFormat:@"%@%@%@%@%@%@",
                        [cleanString substringWithRange:NSMakeRange(0, 1)],[cleanString substringWithRange:NSMakeRange(0, 1)],
                        [cleanString substringWithRange:NSMakeRange(1, 1)],[cleanString substringWithRange:NSMakeRange(1, 1)],
                        [cleanString substringWithRange:NSMakeRange(2, 1)],[cleanString substringWithRange:NSMakeRange(2, 1)]];
     }
-    if([cleanString length] == 6) {
+    
+    if ([cleanString length] == 6) {
         cleanString = [cleanString stringByAppendingString:@"ff"];
     }
     
@@ -42,10 +44,11 @@
 
 - (NSString *)hexFromColor
 {
-	return [NSString stringWithFormat:@"%0.6X", (unsigned int)self.rgbHex];
+	return [NSString stringWithFormat:@"%0.6X_%@", (unsigned int)self.rgbHex, [@([self alpha]) stringValue]];
 }
 
-- (UInt32)rgbHex {
+- (UInt32)rgbHex
+{
 	NSAssert(self.canProvideRGBComponents, @"Must be a RGB color to use rgbHex");
 	
 	CGFloat r,g,b,a;
@@ -60,12 +63,14 @@
     | (((int)roundf(b * 255)));
 }
 
-- (BOOL)red:(CGFloat *)red green:(CGFloat *)green blue:(CGFloat *)blue alpha:(CGFloat *)alpha {
+- (BOOL)red:(CGFloat *)red green:(CGFloat *)green blue:(CGFloat *)blue alpha:(CGFloat *)alpha
+{
 	const CGFloat *components = CGColorGetComponents(self.CGColor);
 	
 	CGFloat r,g,b,a;
 	
-	switch (self.colorSpaceModel) {
+	switch (self.colorSpaceModel)
+    {
 		case kCGColorSpaceModelMonochrome:
 			r = g = b = components[0];
 			a = components[1];
@@ -88,41 +93,48 @@
 	return YES;
 }
 
-- (CGFloat)red {
+- (CGFloat)red
+{
 	NSAssert(self.canProvideRGBComponents, @"Must be an RGB color to use -red");
 	const CGFloat *c = CGColorGetComponents(self.CGColor);
 	return c[0];
 }
 
-- (CGFloat)green {
+- (CGFloat)green
+{
 	NSAssert(self.canProvideRGBComponents, @"Must be an RGB color to use -green");
 	const CGFloat *c = CGColorGetComponents(self.CGColor);
 	if (self.colorSpaceModel == kCGColorSpaceModelMonochrome) return c[0];
 	return c[1];
 }
 
-- (CGFloat)blue {
+- (CGFloat)blue
+{
 	NSAssert(self.canProvideRGBComponents, @"Must be an RGB color to use -blue");
 	const CGFloat *c = CGColorGetComponents(self.CGColor);
 	if (self.colorSpaceModel == kCGColorSpaceModelMonochrome) return c[0];
 	return c[2];
 }
 
-- (CGFloat)white {
+- (CGFloat)white
+{
 	NSAssert(self.colorSpaceModel == kCGColorSpaceModelMonochrome, @"Must be a Monochrome color to use -white");
 	const CGFloat *c = CGColorGetComponents(self.CGColor);
 	return c[0];
 }
 
-- (CGFloat)alpha {
+- (CGFloat)alpha
+{
 	return CGColorGetAlpha(self.CGColor);
 }
 
-- (CGColorSpaceModel)colorSpaceModel {
+- (CGColorSpaceModel)colorSpaceModel
+{
 	return CGColorSpaceGetModel(CGColorGetColorSpace(self.CGColor));
 }
 
-- (BOOL)canProvideRGBComponents {
+- (BOOL)canProvideRGBComponents
+{
 	switch (self.colorSpaceModel) {
 		case kCGColorSpaceModelRGB:
 		case kCGColorSpaceModelMonochrome:
