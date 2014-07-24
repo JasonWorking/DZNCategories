@@ -1,7 +1,5 @@
 DZCategories
 ============
-DZWebBrowser
-================
 [![Pod Version](http://img.shields.io/cocoapods/v/DZNCategories.svg)](https://cocoadocs.org/docsets/DZNCategories)
 [![Gittip](http://img.shields.io/gittip/dzenbot.svg)](https://www.gittip.com/dzenbot/)
 [![License](http://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
