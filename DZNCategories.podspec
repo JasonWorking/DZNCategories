@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name                = "DZNCategories"
-  s.version             = "1.1.1"
+  s.version             = "1.1.2"
   s.summary             = "Useful collection of Objective-C category classes."
   s.homepage            = "https://github.com/dzenbot/DZNCategories"
   s.license             = { :type => 'MIT', :file => 'LICENSE' }
@@ -10,8 +10,7 @@ Pod::Spec.new do |s|
   s.source              = { :git => "https://github.com/dzenbot/DZNCategories.git", :tag => "v#{s.version}" }
   
   # Platform setup
-  s.ios.deployment_target = '7.0'
-  s.osx.deployment_target = '10.8'
+  s.platform            = :ios, '7.0'
   s.requires_arc        = true
 
   # Include Foundation as default spec
@@ -46,6 +45,7 @@ Pod::Spec.new do |s|
   s.subspec 'Foundation' do |fs|
     fs.source_files     = 'Source/Foundation/*.{h,m}'
     fs.frameworks       = 'Foundation', 'CoreGraphics'
+    #fs.osx.deployment_target = '10.8'
   end
 
   s.subspec 'MapKit' do |ms|

@@ -12,14 +12,14 @@
 
 @implementation UITableView (Scroll)
 
-- (void)scrollToTopAnimated:(BOOL)animated
+- (void)scrollTableToTopAnimated:(BOOL)animated
 {
-    [self scrollToRowAtIndexPath:[self firstIndexPath] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+    [self scrollToRowAtIndexPath:[self firstIndexPath] atScrollPosition:UITableViewScrollPositionTop animated:animated];
 }
 
-- (void)scrollToBottomAnimated:(BOOL)animated
+- (void)scrollTableToBottomAnimated:(BOOL)animated
 {
-    [self scrollToRowAtIndexPath:[self lastIndexPath] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+    [self scrollToRowAtIndexPath:[self lastIndexPath] atScrollPosition:UITableViewScrollPositionTop animated:animated];
 }
 
 - (NSIndexPath *)firstIndexPath

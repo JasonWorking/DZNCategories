@@ -12,8 +12,12 @@
 
 @interface UITableView (Scroll)
 
-- (void)scrollToTopAnimated:(BOOL)animated;
+- (void)scrollTableToTopAnimated:(BOOL)animated;
 
-- (void)scrollToBottomAnimated:(BOOL)animated;
+- (void)scrollTableToBottomAnimated:(BOOL)animated;
+
+- (NSIndexPath *)firstIndexPath;
+
+- (NSIndexPath *)lastIndexPath;
 
 @end
