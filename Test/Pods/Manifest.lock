@@ -1,0 +1,29 @@
+PODS:
+  - DZNCategories/Cocoa (1.1.2):
+    - DZNCategories/CoreData
+    - DZNCategories/CoreGraphics
+    - DZNCategories/CoreLocation
+    - DZNCategories/Foundation
+    - DZNCategories/MapKit
+    - DZNCategories/UIKit
+  - DZNCategories/CoreData (1.1.2)
+  - DZNCategories/CoreGraphics (1.1.2)
+  - DZNCategories/CoreLocation (1.1.2)
+  - DZNCategories/Foundation (1.1.2)
+  - DZNCategories/MapKit (1.1.2):
+    - DZNCategories/CoreLocation
+  - DZNCategories/UIKit (1.1.2):
+    - DZNCategories/CoreGraphics
+    - DZNCategories/Foundation
+
+DEPENDENCIES:
+  - DZNCategories/Cocoa (from `../`)
+
+EXTERNAL SOURCES:
+  DZNCategories:
+    :path: ../
+
+SPEC CHECKSUMS:
+  DZNCategories: ec1d1530fa3b6baa69a601df0fe424f22640adbf
+
+COCOAPODS: 0.33.1

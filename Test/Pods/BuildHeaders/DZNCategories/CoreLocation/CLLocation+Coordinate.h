@@ -1,0 +1,1 @@
+../../../../../Source/CoreLocation/CLLocation+Coordinate.h
