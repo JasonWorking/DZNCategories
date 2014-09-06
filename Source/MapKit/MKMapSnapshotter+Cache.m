@@ -12,6 +12,8 @@
 #import "MKGeometry+Rect.h"
 #import "CLLocation+Coordinate.h"
 
+#if __IPHONE_7_0 || __IPHONE_7_1
+
 static NSString *cacheFolderName = @"com.dzn.MKMapSnapshot.default";
 
 @implementation MKMapSnapshotter (Cache)
@@ -128,3 +130,5 @@ static NSString *cacheFolderName = @"com.dzn.MKMapSnapshot.default";
 }
 
 @end
+
+#endif

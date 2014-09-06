@@ -20,7 +20,7 @@
             lround(floor(time / 60.)) % 60,
             lround(floor(time)) % 60];
 }
-
+#if __IPHONE_7_0 || __IPHONE_7_1
 + (NSString *)yesterday
 {
     NSString *localeIdentifier = [[NSLocale preferredLanguages] firstObject];
@@ -50,5 +50,5 @@
     else if ([localeIdentifier isEqualToString:@"de"]) return @"morgen";
     else return @"";
 }
-
+#endif
 @end

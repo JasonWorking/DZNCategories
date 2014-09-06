@@ -40,6 +40,8 @@
     NSDictionary *att = @{NSFontAttributeName:font, NSParagraphStyleAttributeName:style};
     NSStringDrawingOptions options = (NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading);
     
+    #if __IPHONE_7_0 || __IPHONE_7_1
+    
     CGRect textRect = [self boundingRectWithSize:sizeConstraint options:options attributes:att context:nil];
     
     if (textRect.size.height > size.height) {
@@ -55,6 +57,8 @@
             }
         }
     }
+    
+    #endif
     
     return self;
 }

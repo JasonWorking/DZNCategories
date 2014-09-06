@@ -10,6 +10,8 @@
 
 #import <MapKit/MapKit.h>
 
+#if __IPHONE_7_0 || __IPHONE_7_1
+
 typedef void (^MKMapSnapshotCachedCompletionHandler)(UIImage *snapshot, NSError *error);
 
 @interface MKMapSnapshotter (Cache)
@@ -19,3 +21,5 @@ typedef void (^MKMapSnapshotCachedCompletionHandler)(UIImage *snapshot, NSError 
 + (void)clearCachedImages;
 
 @end
+
+#endif

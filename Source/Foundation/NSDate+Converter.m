@@ -24,12 +24,14 @@
     return [dateFormatter dateFromString:string];
 }
 
+#if __IPHONE_7_0 || __IPHONE_7_1
 - (NSString *)stringFromDateWithFormat:(NSString *)format
 {
     NSString *localeIdentifier = [[NSLocale preferredLanguages] firstObject];
     NSLocale *userLocale = [[NSLocale alloc] initWithLocaleIdentifier:localeIdentifier];
     return [self stringFromDateWithFormat:format andLocale:userLocale];
 }
+#endif
 
 - (NSString *)stringFromDateWithFormat:(NSString *)format andLocale:(NSLocale *)locale
 {
@@ -65,7 +67,7 @@
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:[[NSCalendar currentCalendar] calendarIdentifier]];
     return [calendar dateFromComponents:comps];
 }
-
+#if __IPHONE_7_0 || __IPHONE_7_1
 - (NSString *)smartStringDate
 {
     if ([self isToday]) return [NSString today];
@@ -86,7 +88,7 @@
     
     return [dateFormatter stringFromDate:self];
 }
-
+#endif
 - (NSDate *)localTime
 {
     NSTimeZone *tz = [NSTimeZone defaultTimeZone];
