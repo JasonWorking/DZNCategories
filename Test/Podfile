@@ -1,3 +1,7 @@
 platform :ios, '7.0'
 
 pod 'DZNCategories/Cocoa', :path => '../'
+
+target :SampleTests, :exclusive => true do
+    pod 'Kiwi', '~> 2.3'
+end

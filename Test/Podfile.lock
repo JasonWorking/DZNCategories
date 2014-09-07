@@ -15,15 +15,18 @@ PODS:
   - DZNCategories/UIKit (1.1.2):
     - DZNCategories/CoreGraphics
     - DZNCategories/Foundation
+  - Kiwi (2.3.0)
 
 DEPENDENCIES:
   - DZNCategories/Cocoa (from `../`)
+  - Kiwi (~> 2.3)
 
 EXTERNAL SOURCES:
   DZNCategories:
     :path: ../
 
 SPEC CHECKSUMS:
-  DZNCategories: ec1d1530fa3b6baa69a601df0fe424f22640adbf
+  DZNCategories: fa015723ecde65816faa4e6435a1cfefbb819188
+  Kiwi: 54bece5b35564d9b8e03c608d926f1a22fcfc589
 
 COCOAPODS: 0.33.1
