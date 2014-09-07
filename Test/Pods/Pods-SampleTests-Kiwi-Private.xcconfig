@@ -1,0 +1,6 @@
+#include "Pods-SampleTests-Kiwi.xcconfig"
+FRAMEWORK_SEARCH_PATHS = ${PODS_SAMPLETESTS_KIWI_FRAMEWORK_SEARCH_PATHS}
+GCC_PREPROCESSOR_DEFINITIONS = COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/Kiwi" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/DZNCategories" "${PODS_ROOT}/Headers/DZNCategories/CoreData" "${PODS_ROOT}/Headers/DZNCategories/CoreGraphics" "${PODS_ROOT}/Headers/DZNCategories/CoreLocation" "${PODS_ROOT}/Headers/DZNCategories/Foundation" "${PODS_ROOT}/Headers/DZNCategories/MapKit" "${PODS_ROOT}/Headers/DZNCategories/UIKit" "${PODS_ROOT}/Headers/Kiwi"
+OTHER_LDFLAGS = -ObjC ${PODS_SAMPLETESTS_KIWI_OTHER_LDFLAGS}
+PODS_ROOT = ${SRCROOT}
