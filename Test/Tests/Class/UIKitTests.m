@@ -52,6 +52,14 @@ describe(@"UIView Frame", ^{
         [[@(aView.width) should] equal:@994];
         [[@(aView.height) should] equal:@718];
     });
+    
+    it(@"should multiply right values", ^{
+        [aView multiplyToX:2.0];
+        [aView multiplyToY:2.0];
+        
+        [[@(aView.x) should] equal:@60];
+        [[@(aView.y) should] equal:@80];
+    });
 });
 
 

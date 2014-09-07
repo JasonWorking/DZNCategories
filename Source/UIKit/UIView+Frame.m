@@ -90,7 +90,7 @@
 }
 
 
-#pragma mark - Sum
+#pragma mark - Summation
 
 - (void)addToX:(CGFloat)value
 {
@@ -110,6 +110,29 @@
 - (void)addToHeight:(CGFloat)value
 {
     self.height = self.height + value;
+}
+
+
+#pragma mark - Multiplication
+
+- (void)multiplyToX:(CGFloat)value
+{
+    self.x = self.x * value;
+}
+
+- (void)multiplyToY:(CGFloat)value
+{
+    self.y = self.y * value;
+}
+
+- (void)multiplyToWidth:(CGFloat)value
+{
+    self.width = self.width * value;
+}
+
+- (void)multiplyToHeight:(CGFloat)value
+{
+    self.height = self.height * value;
 }
 
 @end
