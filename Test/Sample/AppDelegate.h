@@ -1,5 +1,5 @@
 //
-//  DZAppDelegate.h
+//  AppDelegate.h
 //  Sample
 //
 //  Created by Ignacio Romero Zurbuchen on 8/15/13.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DZAppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @end

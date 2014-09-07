@@ -20,7 +20,7 @@
 		4FB3AB9317BDB03100AA4D58 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB3AB9217BDB03100AA4D58 /* Foundation.framework */; };
 		4FB3AB9517BDB03100AA4D58 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB3AB9417BDB03100AA4D58 /* CoreGraphics.framework */; };
 		4FB3AB9D17BDB03100AA4D58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB3AB9C17BDB03100AA4D58 /* main.m */; };
-		4FB3ABA117BDB03100AA4D58 /* DZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB3ABA017BDB03100AA4D58 /* DZAppDelegate.m */; };
+		4FB3ABA117BDB03100AA4D58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB3ABA017BDB03100AA4D58 /* AppDelegate.m */; };
 		4FB3ABB117BDB03200AA4D58 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB3AB9217BDB03100AA4D58 /* Foundation.framework */; };
 		4FB3AC4617BDB0EA00AA4D58 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB3AC4517BDB0E900AA4D58 /* CoreLocation.framework */; };
 		4FB3AC4817BDB0ED00AA4D58 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB3AC4717BDB0ED00AA4D58 /* QuartzCore.framework */; };
@@ -52,8 +52,8 @@
 		4FB3AB9817BDB03100AA4D58 /* Sample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sample-Info.plist"; sourceTree = "<group>"; };
 		4FB3AB9C17BDB03100AA4D58 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4FB3AB9E17BDB03100AA4D58 /* Sample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sample-Prefix.pch"; sourceTree = "<group>"; };
-		4FB3AB9F17BDB03100AA4D58 /* DZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZAppDelegate.h; sourceTree = "<group>"; };
-		4FB3ABA017BDB03100AA4D58 /* DZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZAppDelegate.m; sourceTree = "<group>"; };
+		4FB3AB9F17BDB03100AA4D58 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4FB3ABA017BDB03100AA4D58 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4FB3ABAD17BDB03200AA4D58 /* SampleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FB3ABAE17BDB03200AA4D58 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		4FB3ABB617BDB03200AA4D58 /* SampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SampleTests-Info.plist"; sourceTree = "<group>"; };
@@ -139,8 +139,8 @@
 		4FB3AB9617BDB03100AA4D58 /* Sample */ = {
 			isa = PBXGroup;
 			children = (
-				4FB3AB9F17BDB03100AA4D58 /* DZAppDelegate.h */,
-				4FB3ABA017BDB03100AA4D58 /* DZAppDelegate.m */,
+				4FB3AB9F17BDB03100AA4D58 /* AppDelegate.h */,
+				4FB3ABA017BDB03100AA4D58 /* AppDelegate.m */,
 				4FB3AB9717BDB03100AA4D58 /* Supporting Files */,
 			);
 			path = Sample;
@@ -347,7 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FB3AB9D17BDB03100AA4D58 /* main.m in Sources */,
-				4FB3ABA117BDB03100AA4D58 /* DZAppDelegate.m in Sources */,
+				4FB3ABA117BDB03100AA4D58 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
