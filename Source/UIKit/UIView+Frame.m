@@ -12,66 +12,104 @@
 
 @implementation UIView (Frame)
 
-- (void)setFrameSize:(CGSize)newSize
+#pragma mark - Getters
+
+- (CGFloat)x
 {
-    CGRect f = self.frame;
-    f.size = newSize;
-    self.frame = f;
+    return self.origin.x;
 }
 
-- (void)setFrameWidth:(CGFloat)newWidth {
-    CGRect f = self.frame;
-    f.size.width = newWidth;
-    self.frame = f;
-}
-
-- (void)setFrameHeight:(CGFloat)newHeight {
-    CGRect f = self.frame;
-    f.size.height = newHeight;
-    self.frame = f;
-}
-
-- (void)setFrameOrigin:(CGPoint)newOrigin
+- (CGFloat)y
 {
-    CGRect f = self.frame;
-    f.origin = newOrigin;
-    self.frame = f;
+    return self.origin.y;
 }
 
-- (void)setFrameOriginX:(CGFloat)newX {
-    CGRect f = self.frame;
-    f.origin.x = newX;
-    self.frame = f;
+- (CGFloat)width
+{
+    return self.size.width;
 }
 
-- (void)setFrameOriginY:(CGFloat)newY {
-    CGRect f = self.frame;
-    f.origin.y = newY;
-    self.frame = f;
+- (CGFloat)height
+{
+    return self.size.height;
 }
 
-- (void)addSizeWidth:(CGFloat)newWidth {
-    CGRect f = self.frame;
-    f.size.width += newWidth;
-    self.frame = f;
+- (CGSize)size
+{
+    return self.frame.size;
 }
 
-- (void)addSizeHeight:(CGFloat)newHeight {
-    CGRect f = self.frame;
-    f.size.height += newHeight;
-    self.frame = f;
+- (CGPoint)origin
+{
+    return self.frame.origin;
 }
 
-- (void)addOriginX:(CGFloat)newX {
-    CGRect f = self.frame;
-    f.origin.x += newX;
-    self.frame = f;
+
+#pragma mark - Setters
+
+- (void)setX:(CGFloat)x
+{
+    CGPoint point = self.origin;
+    point.x = x;
+    self.origin = point;
 }
 
-- (void)addOriginY:(CGFloat)newY {
-    CGRect f = self.frame;
-    f.origin.y += newY;
-    self.frame = f;
+- (void)setY:(CGFloat)y
+{
+    CGPoint point = self.origin;
+    point.y = y;
+    self.origin = point;
+}
+
+- (void)setWidth:(CGFloat)width
+{
+    CGSize size = self.size;
+    size.width = width;
+    self.size = size;
+}
+
+- (void)setHeight:(CGFloat)height
+{
+    CGSize size = self.size;
+    size.height = height;
+    self.size = size;
+}
+
+- (void)setOrigin:(CGPoint)origin
+{
+    CGRect rect = self.frame;
+    rect.origin = origin;
+    self.frame = rect;
+}
+
+- (void)setSize:(CGSize)size
+{
+    CGRect rect = self.frame;
+    rect.size = size;
+    self.frame = rect;
+}
+
+
+#pragma mark - Sum
+
+- (void)addToX:(CGFloat)value
+{
+    self.x = self.x + value;
+}
+
+- (void)addToY:(CGFloat)value
+{
+    self.y = self.y + value;
+}
+
+- (void)addToWidth:(CGFloat)value
+{
+    self.width = self.width + value;
+}
+
+- (void)addToHeight:(CGFloat)value
+{
+    self.height = self.height + value;
 }
 
 @end
