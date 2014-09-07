@@ -19,7 +19,7 @@
     NSCalendar *cal = [NSDate userCalendar];
     NSDate *today = [NSDate today];
     
-    NSDateComponents *components = [cal components:[NSDate dayCalendarComponents] fromDate:self];
+    NSDateComponents *components = [cal components:[NSDate fullCalendarComponents] fromDate:self];
     NSDate *otherDate = [cal dateFromComponents:components];
 
     return ([today compare:otherDate] == NSOrderedSame);
@@ -30,7 +30,7 @@
     NSCalendar *cal = [NSDate userCalendar];
     NSDate *yesterday = [NSDate yesterday];
     
-    NSDateComponents *components = [cal components:[NSDate dayCalendarComponents] fromDate:self];
+    NSDateComponents *components = [cal components:[NSDate fullCalendarComponents] fromDate:self];
     NSDate *otherDate = [cal dateFromComponents:components];
     
     return ([yesterday compare:otherDate] == NSOrderedSame);
@@ -40,11 +40,11 @@
 {
     NSCalendar *cal = [NSDate userCalendar];
     
-    NSDateComponents *components = [cal components:[NSDate dayCalendarComponents] fromDate:self];
+    NSDateComponents *components = [cal components:[NSDate fullCalendarComponents] fromDate:self];
     [components setDay:1];
     NSDate *firstDayOfMonthDate = [cal dateFromComponents:components];
     
-    components = [cal components:[NSDate dayCalendarComponents] fromDate:self];
+    components = [cal components:[NSDate fullCalendarComponents] fromDate:self];
     NSDate *otherDate = [cal dateFromComponents:components];
     
     return ([firstDayOfMonthDate compare:otherDate] == NSOrderedSame);

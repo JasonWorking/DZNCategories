@@ -27,7 +27,7 @@
 
 + (NSDate *)today
 {
-    return [NSDate todayByComponents:[NSDate dayCalendarComponents]];
+    return [NSDate todayByComponents:[NSDate fullCalendarComponents]];
 }
 
 + (NSDate *)todayByComponents:(NSUInteger)comp
@@ -39,7 +39,7 @@
 
 + (NSDate *)yesterday
 {
-    return [NSDate yesterdayByComponents:[NSDate dayCalendarComponents]];
+    return [NSDate yesterdayByComponents:[NSDate fullCalendarComponents]];
 }
 
 + (NSDate *)yesterdayByComponents:(NSUInteger)comp

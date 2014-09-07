@@ -40,6 +40,18 @@ describe(@"UIView Frame", ^{
         [[@(aView.width) should] equal:@984];
         [[@(aView.height) should] equal:@708];
     });
+    
+    it(@"should add right values", ^{
+        [aView addToX:10.0];
+        [aView addToY:10.0];
+        [aView addToWidth:10.0];
+        [aView addToHeight:10.0];
+        
+        [[@(aView.x) should] equal:@30];
+        [[@(aView.y) should] equal:@40];
+        [[@(aView.width) should] equal:@994];
+        [[@(aView.height) should] equal:@718];
+    });
 });
 
 
