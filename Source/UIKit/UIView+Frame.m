@@ -135,4 +135,37 @@
     self.height = self.height * value;
 }
 
+
+#pragma mark - Deprecated
+
+- (void)setFrameOriginX:(CGFloat)x
+{
+    self.x = x;
+}
+
+- (void)setFrameOriginY:(CGFloat)y
+{
+    self.y = y;
+}
+
+- (void)setFrameWidth:(CGFloat)width
+{
+    self.width = width;
+}
+
+- (void)setFrameHeight:(CGFloat)height
+{
+    self.height = height;
+}
+
+- (void)setFrameOrigin:(CGPoint)origin
+{
+    self.origin = origin;
+}
+
+- (void)setFrameSize:(CGSize)size
+{
+    self.size = size;
+}
+
 @end
