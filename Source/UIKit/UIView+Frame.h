@@ -36,11 +36,11 @@
 - (void)multiplyToHeight:(CGFloat)value;
 
 // Deprecated
-- (void)setFrameOriginX:(CGFloat)x DEPRECATED_ATTRIBUTE;
-- (void)setFrameOriginY:(CGFloat)y DEPRECATED_ATTRIBUTE;
-- (void)setFrameWidth:(CGFloat)width DEPRECATED_ATTRIBUTE;
-- (void)setFrameHeight:(CGFloat)height DEPRECATED_ATTRIBUTE;
-- (void)setFrameOrigin:(CGPoint)origin DEPRECATED_ATTRIBUTE;
-- (void)setFrameSize:(CGSize)size DEPRECATED_ATTRIBUTE;
+- (void)setFrameOriginX:(CGFloat)x DEPRECATED_MSG_ATTRIBUTE("Use -setX: instead");
+- (void)setFrameOriginY:(CGFloat)y DEPRECATED_MSG_ATTRIBUTE("Use -setY: instead");
+- (void)setFrameWidth:(CGFloat)width DEPRECATED_MSG_ATTRIBUTE("Use -setWidth: instead");
+- (void)setFrameHeight:(CGFloat)height DEPRECATED_MSG_ATTRIBUTE("Use -setHeight: instead");
+- (void)setFrameOrigin:(CGPoint)origin DEPRECATED_MSG_ATTRIBUTE("Use -setOrigin: instead");
+- (void)setFrameSize:(CGSize)size DEPRECATED_MSG_ATTRIBUTE("Use -setSize: instead");
 
 @end
