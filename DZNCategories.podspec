@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name                = "DZNCategories"
-  s.version             = "1.1.2"
+  s.version             = "1.2"
   s.summary             = "Useful collection of Objective-C category classes."
   s.homepage            = "https://github.com/dzenbot/DZNCategories"
   s.license             = { :type => 'MIT', :file => 'LICENSE' }
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.source              = { :git => "https://github.com/dzenbot/DZNCategories.git", :tag => "v#{s.version}" }
   
   # Platform setup
-  s.platform            = :ios, '6.1'
+  s.platform            = :ios, '7.0'
   s.requires_arc        = true
 
   # Include Foundation as default spec
